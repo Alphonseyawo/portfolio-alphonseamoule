@@ -1,0 +1,121 @@
+import { motion } from "framer-motion";
+import { ArrowDown, Mail, MapPin } from "lucide-react";
+import portrait from "@/assets/portrait.jpg";
+
+const Hero = () => {
+  return (
+    <section id="home" className="relative min-h-screen flex items-center bg-hero-gradient grain overflow-hidden">
+      {/* Decorative grid */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
+        backgroundSize: '60px 60px'
+      }} />
+
+      <div className="container relative z-10 grid lg:grid-cols-12 gap-12 items-center py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="lg:col-span-7 space-y-8"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/40 backdrop-blur-sm text-sm text-muted-foreground">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+            </span>
+            Disponible pour de nouveaux projets
+          </div>
+
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
+            Marketing<br />
+            digital <span className="text-gradient italic font-medium">&</span><br />
+            <span className="text-primary">communication.</span>
+          </h1>
+
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
+            Je suis <span className="text-foreground font-medium">Yawo Alphonse Amoulé</span>, créateur de contenus et stratège digital. Je transforme les idées en visuels qui captent et en campagnes qui convertissent.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+            <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" /> Lomé, Togo</span>
+            <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> amoulealphonse38@gmail.com</span>
+          </div>
+
+          <div className="flex flex-wrap gap-4 pt-4">
+            <a
+              href="#projects"
+              className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-glow transition-all duration-500"
+            >
+              Voir mes projets
+              <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              Me contacter
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="lg:col-span-5 relative"
+        >
+          <div className="relative aspect-[4/5] max-w-md mx-auto">
+            <div className="absolute -inset-4 bg-primary/20 rounded-[2rem] blur-3xl" />
+            <div className="relative h-full rounded-[2rem] overflow-hidden border border-border shadow-elevated bg-card-gradient">
+              <img src={portrait} alt="Portrait de Yawo Alphonse Amoulé" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            </div>
+
+            {/* Floating badges */}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -left-6 top-12 bg-card-gradient border border-border rounded-2xl px-4 py-3 shadow-elevated backdrop-blur-sm"
+            >
+              <div className="text-xs text-muted-foreground">Spécialité</div>
+              <div className="font-display font-semibold text-sm">Content & Design</div>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -right-4 bottom-16 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-glow"
+            >
+              <div className="text-xs opacity-80">Projets</div>
+              <div className="font-display font-bold text-2xl">RSE Learn</div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Marquee */}
+      <div className="absolute bottom-0 left-0 right-0 border-t border-border py-4 overflow-hidden bg-background/50 backdrop-blur-sm">
+        <div className="flex gap-12 animate-[scroll_30s_linear_infinite] whitespace-nowrap text-sm uppercase tracking-[0.3em] text-muted-foreground">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="flex gap-12 items-center shrink-0">
+              <span>Social Media</span><span className="text-primary">●</span>
+              <span>Graphisme</span><span className="text-primary">●</span>
+              <span>Email Marketing</span><span className="text-primary">●</span>
+              <span>Montage Vidéo</span><span className="text-primary">●</span>
+              <span>Stratégie Digitale</span><span className="text-primary">●</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default Hero;
