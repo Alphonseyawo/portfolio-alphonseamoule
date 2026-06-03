@@ -67,6 +67,15 @@ const Contact = () => {
                 ))}
               </div>
             </div>
+
+            <div className="p-6 rounded-2xl border border-border bg-secondary/30">
+              <div className="text-xs uppercase tracking-widest text-primary mb-3">Loisirs</div>
+              <div className="flex flex-wrap gap-2">
+                {["Sport", "Musique", "Manga"].map((l) => (
+                  <span key={l} className="px-4 py-1.5 rounded-full bg-background border border-border text-sm">{l}</span>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
