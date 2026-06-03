@@ -9,12 +9,12 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Yawo Alphonse Amoulé — Marketing Digital & Communication";
+    document.title = "Alphonse Yawo AMOULE — Marketing Digital & Communication";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
     meta.setAttribute(
       "content",
-      "Portfolio de Yawo Alphonse Amoulé — spécialiste marketing digital, création de contenu, graphisme et email marketing à Lomé."
+      "Portfolio de Alphonse Yawo AMOULE — spécialiste marketing digital, création de contenu, graphisme et email marketing à Lomé."
     );
     document.head.appendChild(meta);
   }, []);
