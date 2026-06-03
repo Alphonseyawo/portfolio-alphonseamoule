@@ -72,14 +72,6 @@ const Hero = () => {
             </div>
 
             {/* Floating badges */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-6 top-12 bg-card-gradient border border-border rounded-2xl px-4 py-3 shadow-elevated backdrop-blur-sm"
-            >
-              <div className="text-xs text-muted-foreground">Spécialité</div>
-              <div className="font-display font-semibold text-sm">Content & Design</div>
-            </motion.div>
 
             <motion.div
               animate={{ y: [0, 10, 0] }}
