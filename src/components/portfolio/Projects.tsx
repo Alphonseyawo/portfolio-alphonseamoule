@@ -7,7 +7,7 @@ const MotionLink = motion(Link);
 const projects = [
   {
     n: "01",
-    category: "Communication digitale · RSE",
+    category: "Communication digitale · RSE — Groupe Ecom",
     title: "RSE Learn — Groupe Ecom",
     desc: "Conception de visuels, carrousels et contenus éditoriaux pour le projet RSE Learn. Stratégie de publication TikTok & Instagram.",
     tags: ["Carrousels", "Articles blog", "TikTok", "Instagram"],
@@ -15,24 +15,32 @@ const projects = [
   },
   {
     n: "02",
+    category: "Marketing digital · Solve Consult International",
+    title: "Solve Consult International — Stage Marketing",
+    desc: "Appui à la stratégie de communication digitale, production de contenus et suivi des campagnes sur les réseaux sociaux pendant le stage chez Solve Consult International.",
+    tags: ["Stratégie", "Contenus", "Social media", "Reporting"],
+  },
+  {
+    n: "03",
     category: "Création de contenu · Vidéo",
     title: "Montage & Production sociale",
     desc: "Production de vidéos courtes optimisées pour les formats verticaux. Découpage, sous-titrage et habillage graphique.",
     tags: ["CapCut", "VN", "Reels"],
   },
   {
-    n: "03",
+    n: "04",
     category: "Email Marketing · Automation",
     title: "Campagnes Brevo & Workflows",
     desc: "Mise en place de campagnes emailing et de scénarios d'automatisation, depuis la segmentation jusqu'à la mesure des performances.",
     tags: ["Brevo", "HubSpot", "Automation"],
   },
   {
-    n: "04",
-    category: "Identité & Branding",
-    title: "Visuels & charte graphique",
-    desc: "Création de visuels attractifs alignés sur l'identité de marque, du moodboard à l'export final pour les réseaux.",
-    tags: ["Photoshop", "Canva", "Figma"],
+    n: "05",
+    category: "Design graphique · Réseaux sociaux",
+    title: "Autres réalisations — Visuels & affiches",
+    desc: "Une galerie de visuels conçus pour des conférences, campagnes et programmes : affiches, posts Instagram et supports promotionnels.",
+    tags: ["Canva", "Photoshop", "Affiches", "Posts"],
+    href: "/projets/autres-realisations",
   },
 ];
 
