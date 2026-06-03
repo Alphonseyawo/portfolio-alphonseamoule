@@ -3,18 +3,25 @@ import { GraduationCap, Briefcase, Award } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { value: "2025", label: "Stage Groupe Ecom" },
-    { value: "5+", label: "Certifications" },
-    { value: "3", label: "Plateformes maîtrisées" },
+    { value: "2x", label: "Stages en communication digitale" },
+    { value: "6+", label: "Certifications" },
+    { value: "8+", label: "Outils maîtrisés" },
   ];
 
   const timeline = [
     {
       icon: Briefcase,
-      date: "Juil. — Oct. 2025",
-      title: "Stage Communication Digitale & Graphiste",
+      date: "Juil. — Nov. 2025",
+      title: "Stage Communication Digitale & Marketing",
       org: "Groupe Ecom Sarl U",
-      desc: "Création de visuels et carrousels pour le projet RSE Learn, rédaction d'articles, montage vidéo, gestion TikTok & Instagram.",
+      desc: "Création de visuels et carrousels pour le projet RSE Learn, rédaction d'articles de blog et de légendes, montage vidéo, publication de contenus sur TikTok & Instagram.",
+    },
+    {
+      icon: Briefcase,
+      date: "Mars — Juin 2025",
+      title: "Stage Communication Digitale & Marketing",
+      org: "Solve Consult International (SCI)",
+      desc: "Création de visuels, carrousels et teasers, rédaction d'articles de blog et de newsletters engageantes, montage vidéo et community management.",
     },
     {
       icon: GraduationCap,
@@ -25,17 +32,17 @@ const About = () => {
     },
     {
       icon: GraduationCap,
-      date: "Oct. 2023 — Présent",
-      title: "Licence Fondamentale en Français",
-      org: "Université de Lomé",
-      desc: "Maîtrise de la langue, de l'écriture et de l'analyse — un socle essentiel pour la création de contenus.",
+      date: "Sept. 2022 — Juil. 2023",
+      title: "Baccalauréat Série A",
+      org: "Lycée d'Amoussimé",
+      desc: "Obtention du baccalauréat littéraire — un socle solide en expression écrite et en analyse.",
     },
     {
       icon: Award,
-      date: "2025",
+      date: "2024 — 2025",
       title: "Certifications Marketing & Digital",
-      org: "Brevo, HubSpot Academia, Blemama, Atingi, Néhémiah Education",
-      desc: "Email marketing, automatisation, gestion de projet, réseaux sociaux et création de chatbot.",
+      org: "Brevo, HubSpot Academia, Blemama, Néhémiah Éducation, HP LIFE",
+      desc: "Email marketing, automatisation, réseaux sociaux et stratégies digitales, e-mails professionnels et formation immersive intensive.",
     },
   ];
 
