@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -8,6 +9,7 @@ const projects = [
     title: "RSE Learn — Groupe Ecom",
     desc: "Conception de visuels, carrousels et contenus éditoriaux pour le projet RSE Learn. Stratégie de publication TikTok & Instagram.",
     tags: ["Carrousels", "Articles blog", "TikTok", "Instagram"],
+    href: "/projets/rse-learn",
   },
   {
     n: "02",
