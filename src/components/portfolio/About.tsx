@@ -53,9 +53,20 @@ const About = () => {
           <h2 className="font-display text-4xl lg:text-6xl font-bold leading-tight mb-8">
             Curieux, proactif, <span className="text-gradient italic">passionné</span> par tout ce qui crée du lien.
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Passionné par la communication et le marketing digital, j'ai développé mes compétences dans la gestion des réseaux sociaux (TikTok, Instagram, Facebook) et la création de contenus. Je me suis formé en graphisme, ce qui me permet de créer des visuels attractifs. Je suis curieux, proactif et motivé d'apprendre davantage.
-          </p>
+          <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              La communication et le marketing digital sont pour moi bien plus qu'un domaine d'activité&nbsp;: c'est un terrain de jeu où chaque idée peut devenir une histoire, et chaque histoire un véritable lien avec une audience. J'évolue au quotidien dans cet univers en perpétuel mouvement, où les tendances changent vite et où il faut savoir capter l'attention en quelques secondes.
+            </p>
+            <p>
+              Au fil des projets, j'ai appris à penser une présence digitale dans sa globalité&nbsp;: comprendre une cible, définir une ligne éditoriale, imaginer des formats adaptés à chaque plateforme — <span className="text-foreground">TikTok</span> pour la créativité brute, <span className="text-foreground">Instagram</span> pour l'esthétique et la communauté, <span className="text-foreground">Facebook</span> pour la proximité — puis mesurer ce qui fonctionne réellement afin d'ajuster la stratégie.
+            </p>
+            <p>
+              Ma formation en graphisme me permet de prolonger cette réflexion jusqu'au visuel&nbsp;: carrousels, posts, miniatures, identités de marque. Je conçois chaque création comme un outil au service d'un message — clair, cohérent et marquant. J'aime aussi explorer le montage vidéo, l'email marketing et les outils d'automatisation, parce qu'une bonne communication, aujourd'hui, c'est avant tout une expérience complète.
+            </p>
+            <p>
+              Curieux, rigoureux et profondément orienté résultats, je cherche à apprendre en continu, à confronter mes idées au terrain et à collaborer avec des équipes qui croient au pouvoir d'une histoire bien racontée.
+            </p>
+          </div>
         </motion.div>
 
         {/* Stats */}
