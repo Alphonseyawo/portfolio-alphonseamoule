@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const MotionLink = motion(Link);
+
 const projects = [
   {
     n: "01",
