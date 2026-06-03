@@ -57,10 +57,15 @@ const Projects = () => {
         </motion.div>
 
         <div className="space-y-4">
-          {projects.map((project, i) => (
-            <motion.a
+          {projects.map((project, i) => {
+            const target = project.href ?? "#contact";
+            const isInternal = target.startsWith("/");
+            const Comp: any = isInternal ? motion(Link) : motion.a;
+            const linkProps = isInternal ? { to: target } : { href: target };
+            return (
+            <Comp
               key={project.n}
-              href="#contact"
+              {...linkProps}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
