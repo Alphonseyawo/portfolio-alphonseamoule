@@ -62,7 +62,7 @@ const Projects = () => {
           {projects.map((project, i) => {
             const target = project.href ?? "#contact";
             const isInternal = target.startsWith("/");
-            const Comp: any = isInternal ? motion(Link) : motion.a;
+            const Comp: any = isInternal ? MotionLink : motion.a;
             const linkProps = isInternal ? { to: target } : { href: target };
             return (
             <Comp
