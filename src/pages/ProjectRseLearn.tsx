@@ -22,7 +22,7 @@ const documents = [
 
 const ProjectRseLearn = () => {
   useEffect(() => {
-    document.title = "Projet RSE Learn — Documents | Yawo Alphonse Amoulé";
+    document.title = "Projet RSE Learn — Documents | Alphonse Yawo AMOULE";
   }, []);
 
   return (

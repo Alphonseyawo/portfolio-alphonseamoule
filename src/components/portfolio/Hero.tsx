@@ -33,7 +33,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
-            Je suis <span className="text-foreground font-medium">Yawo Alphonse Amoulé</span>, créateur de contenus et stratège digital. Je transforme les idées en visuels qui captent et en campagnes qui convertissent.
+            Je suis <span className="text-foreground font-medium">Alphonse Yawo AMOULE</span>, créateur de contenus et stratège digital. Je transforme les idées en visuels qui captent et en campagnes qui convertissent.
           </p>
 
           <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
@@ -67,7 +67,7 @@ const Hero = () => {
           <div className="relative aspect-[4/5] max-w-md mx-auto">
             <div className="absolute -inset-4 bg-primary/20 rounded-[2rem] blur-3xl" />
             <div className="relative h-full rounded-[2rem] overflow-hidden border border-border shadow-elevated bg-card-gradient">
-              <img src={portrait} alt="Portrait de Yawo Alphonse Amoulé" className="w-full h-full object-cover" />
+              <img src={portrait} alt="Portrait de Alphonse Yawo AMOULE" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
 
