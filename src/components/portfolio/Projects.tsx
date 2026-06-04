@@ -7,21 +7,14 @@ const MotionLink = motion(Link);
 const projects = [
   {
     n: "01",
-    category: "Communication digitale · RSE — Groupe Ecom",
-    title: "RSE Learn — Groupe Ecom",
-    desc: "Conception de visuels, carrousels et contenus éditoriaux pour le projet RSE Learn. Stratégie de publication TikTok & Instagram.",
-    tags: ["Carrousels", "Articles blog", "TikTok", "Instagram"],
+    category: "Communication digitale & Marketing · Groupe Ecom & Solve Consult International",
+    title: "Groupe Ecom & Solve Consult International",
+    desc: "Deux stages en communication digitale et marketing : conception de visuels, carrousels et contenus éditoriaux, rédaction d'articles et de newsletters, montage vidéo, community management et publication sur TikTok, Instagram et Facebook.",
+    tags: ["Carrousels", "Articles blog", "Newsletters", "TikTok", "Instagram"],
     href: "/projets/rse-learn",
   },
   {
     n: "02",
-    category: "Marketing digital · Solve Consult International",
-    title: "Solve Consult International — Stage Marketing",
-    desc: "Appui à la stratégie de communication digitale, production de contenus et suivi des campagnes sur les réseaux sociaux pendant le stage chez Solve Consult International.",
-    tags: ["Stratégie", "Contenus", "Social media", "Reporting"],
-  },
-  {
-    n: "03",
     category: "Création de contenu · Vidéo",
     title: "Montage & Production sociale",
     desc: "Production de vidéos courtes optimisées pour les formats verticaux. Découpage, sous-titrage et habillage graphique.",
