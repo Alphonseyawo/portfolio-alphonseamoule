@@ -28,7 +28,7 @@ const projects = [
     tags: ["Brevo", "HubSpot", "Automation"],
   },
   {
-    n: "04",
+    n: "05",
     category: "Design graphique · Réseaux sociaux",
     title: "Autres réalisations — Visuels & affiches",
     desc: "Une galerie de visuels conçus pour des conférences, campagnes et programmes : affiches, posts Instagram et supports promotionnels.",
