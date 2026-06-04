@@ -103,7 +103,7 @@ const ProjectRseLearn = () => {
 
               <div className="mt-8 rounded-2xl overflow-hidden border border-border bg-secondary/30">
                 <iframe
-                  src={`${doc.url}#toolbar=0&view=FitH`}
+                  src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`}
                   title={doc.title}
                   className="w-full h-[480px]"
                 />
