@@ -135,10 +135,7 @@ const ProjectRseLearn = () => {
                   className="group flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-border bg-card-gradient hover:border-primary/40 transition-all"
                 >
                   <div className="min-w-0">
-                    <div className="font-medium text-sm mb-1 truncate">{link.label}</div>
-                    <div className="text-xs text-muted-foreground font-mono truncate group-hover:text-primary transition-colors">
-                      {link.url}
-                    </div>
+                    <div className="font-medium text-sm truncate">{link.label}</div>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                 </a>
