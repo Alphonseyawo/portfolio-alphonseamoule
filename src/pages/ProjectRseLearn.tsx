@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Download, FileText, Eye } from "lucide-react";
+import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import fiche from "@/assets/rse/fiche-strategique.pdf.asset.json";
@@ -18,6 +18,16 @@ const documents = [
     url: accord.url,
     filename: "accord-collaboration-volontaire.pdf",
   },
+];
+
+const canvaLinks = [
+  { label: "Bienvenue — Programme LEARN", url: "https://canva.link/50byq1o8vyx90j6" },
+  { label: "Conférence LEARN — Dr Franck Kossi SOMALI", url: "https://canva.link/l81ng6mnlutp4ap" },
+  { label: "Speaker — AMEYOU Comlan Joél", url: "https://canva.link/zz58bd3jnohapma" },
+  { label: "Speaker — MOUKAILA Moubarak", url: "https://canva.link/govb2zsuav8lomo" },
+  { label: "Partenaires — Programme LEARN", url: "https://canva.link/4c5y2d3ptv03tbz" },
+  { label: "Ecom — Des courses en toute sécurité", url: "https://canva.link/cqy6kw35kz0cal2" },
+  { label: "Alpha Marketing — Nos offres", url: "https://canva.link/4c5y2d3ptv03tbz" },
 ];
 
 const ProjectRseLearn = () => {
