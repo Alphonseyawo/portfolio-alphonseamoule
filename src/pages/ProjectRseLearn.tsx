@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Download, FileText, Eye } from "lucide-react";
+import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import fiche from "@/assets/rse/fiche-strategique.pdf.asset.json";
@@ -18,6 +18,16 @@ const documents = [
     url: accord.url,
     filename: "accord-collaboration-volontaire.pdf",
   },
+];
+
+const canvaLinks = [
+  { label: "Bienvenue — Programme LEARN", url: "https://canva.link/50byq1o8vyx90j6" },
+  { label: "Conférence LEARN — Dr Franck Kossi SOMALI", url: "https://canva.link/l81ng6mnlutp4ap" },
+  { label: "Speaker — AMEYOU Comlan Joél", url: "https://canva.link/zz58bd3jnohapma" },
+  { label: "Speaker — MOUKAILA Moubarak", url: "https://canva.link/govb2zsuav8lomo" },
+  { label: "Partenaires — Programme LEARN", url: "https://canva.link/4c5y2d3ptv03tbz" },
+  { label: "Ecom — Des courses en toute sécurité", url: "https://canva.link/cqy6kw35kz0cal2" },
+  { label: "Alpha Marketing — Nos offres", url: "https://canva.link/4c5y2d3ptv03tbz" },
 ];
 
 const ProjectRseLearn = () => {
@@ -43,13 +53,13 @@ const ProjectRseLearn = () => {
           className="mb-16"
         >
           <div className="text-sm uppercase tracking-[0.3em] text-primary mb-6">
-            — Communication digitale · RSE
+            — Communication digitale & Marketing
           </div>
           <h1 className="font-display text-4xl lg:text-6xl font-bold leading-tight mb-6">
-            RSE Learn — <span className="text-gradient italic">Groupe Ecom</span>
+            Groupe Ecom & <span className="text-gradient italic">Solve Consult International</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            Consultez ou téléchargez les documents officiels liés au projet RSE Learn.
+            Documents officiels du projet RSE Learn et liens vers les réalisations visuelles produites pendant ces deux stages.
           </p>
         </motion.div>
 
@@ -98,6 +108,41 @@ const ProjectRseLearn = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-20"
+        >
+          <h2 className="font-display text-3xl lg:text-4xl font-semibold mb-3">
+            Réalisations visuelles
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-2xl">
+            Liens Canva des visuels et affiches conçus pendant ces missions.
+          </p>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {canvaLinks.map((link) => (
+              <li key={link.label + link.url}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-border bg-card-gradient hover:border-primary/40 transition-all"
+                >
+                  <div className="min-w-0">
+                    <div className="font-medium text-sm mb-1 truncate">{link.label}</div>
+                    <div className="text-xs text-muted-foreground font-mono truncate group-hover:text-primary transition-colors">
+                      {link.url}
+                    </div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
     </main>
   );
