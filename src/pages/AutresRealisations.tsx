@@ -9,6 +9,8 @@ import bienvenue from "@/assets/realisations/bienvenue-learn.png.asset.json";
 import alpha from "@/assets/realisations/alpha-marketing.jpg.asset.json";
 import partenaires from "@/assets/realisations/partenaires-learn.png.asset.json";
 import commande from "@/assets/realisations/commande-ecom.jpg.asset.json";
+import carrousel from "@/assets/realisations/carrousel-learn.jpg.asset.json";
+import carrouselPdf from "@/assets/rse/carrousel-learn.pdf.asset.json";
 
 const visuals = [
   { src: bienvenue.url, title: "Bienvenue — Programme LEARN", canva: "https://canva.link/50byq1o8vyx90j6" },
@@ -18,6 +20,7 @@ const visuals = [
   { src: partenaires.url, title: "Partenaires — Programme LEARN", canva: "https://canva.link/4c5y2d3ptv03tbz" },
   { src: commande.url, title: "Ecom — Des courses en toute sécurité", canva: "https://canva.link/cqy6kw35kz0cal2" },
   { src: alpha.url, title: "Alpha Marketing — Nos offres", canva: "https://canva.link/4c5y2d3ptv03tbz" },
+  { src: carrousel.url, title: "Carrousel LEARN", canva: carrouselPdf.url },
 ];
 
 const AutresRealisations = () => {
