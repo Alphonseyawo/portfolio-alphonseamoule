@@ -11,17 +11,17 @@ const About = () => {
   const timeline = [
     {
       icon: Briefcase,
-      date: "Juil. — Nov. 2025",
-      title: "Stage Communication Digitale & Marketing",
-      org: "Groupe Ecom Sarl U",
-      desc: "Création de visuels et carrousels pour le projet RSE Learn, rédaction d'articles de blog et de légendes, montage vidéo, publication de contenus sur TikTok & Instagram.",
-    },
-    {
-      icon: Briefcase,
       date: "Mars — Juin 2025",
       title: "Stage Communication Digitale & Marketing",
       org: "Solve Consult International (SCI)",
       desc: "Création de visuels, carrousels et teasers, rédaction d'articles de blog et de newsletters engageantes, montage vidéo et community management.",
+    },
+    {
+      icon: Briefcase,
+      date: "Juil. — Nov. 2025",
+      title: "Stage Communication Digitale & Marketing",
+      org: "Groupe Ecom Sarl U",
+      desc: "Création de visuels et carrousels pour le projet RSE Learn, rédaction d'articles de blog et de légendes, montage vidéo, publication de contenus sur TikTok & Instagram.",
     },
     {
       icon: GraduationCap,
