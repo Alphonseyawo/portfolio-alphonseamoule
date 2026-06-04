@@ -53,13 +53,13 @@ const ProjectRseLearn = () => {
           className="mb-16"
         >
           <div className="text-sm uppercase tracking-[0.3em] text-primary mb-6">
-            — Communication digitale · RSE
+            — Communication digitale & Marketing
           </div>
           <h1 className="font-display text-4xl lg:text-6xl font-bold leading-tight mb-6">
-            RSE Learn — <span className="text-gradient italic">Groupe Ecom</span>
+            Groupe Ecom & <span className="text-gradient italic">Solve Consult International</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            Consultez ou téléchargez les documents officiels liés au projet RSE Learn.
+            Documents officiels du projet RSE Learn et liens vers les réalisations visuelles produites pendant ces deux stages.
           </p>
         </motion.div>
 
