@@ -21,7 +21,7 @@ const projects = [
     tags: ["CapCut", "VN", "Reels"],
   },
   {
-    n: "04",
+    n: "03",
     category: "Email Marketing · Automation",
     title: "Campagnes Brevo & Workflows",
     desc: "Mise en place de campagnes emailing et de scénarios d'automatisation, depuis la segmentation jusqu'à la mesure des performances.",
