@@ -108,6 +108,41 @@ const ProjectRseLearn = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-20"
+        >
+          <h2 className="font-display text-3xl lg:text-4xl font-semibold mb-3">
+            Réalisations visuelles
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-2xl">
+            Liens Canva des visuels et affiches conçus pendant ces missions.
+          </p>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {canvaLinks.map((link) => (
+              <li key={link.label + link.url}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-border bg-card-gradient hover:border-primary/40 transition-all"
+                >
+                  <div className="min-w-0">
+                    <div className="font-medium text-sm mb-1 truncate">{link.label}</div>
+                    <div className="text-xs text-muted-foreground font-mono truncate group-hover:text-primary transition-colors">
+                      {link.url}
+                    </div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
     </main>
   );
