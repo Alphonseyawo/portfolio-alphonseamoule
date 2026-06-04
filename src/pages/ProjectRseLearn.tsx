@@ -2,21 +2,24 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import fiche from "@/assets/rse/fiche-strategique.pdf.asset.json";
-import accord from "@/assets/rse/accord-collaboration.pdf.asset.json";
+import carrousel from "@/assets/rse/carrousel-learn.pdf.asset.json";
 
 const documents = [
   {
-    title: "Fiche stratégique — Expansion Learn",
-    description: "Document stratégique détaillant le plan d'expansion du projet RSE Learn.",
-    url: fiche.url,
-    filename: "fiche-strategique-expansion-learn.pdf",
+    title: "Article — Programme LEARN",
+    description: "Article rédigé dans le cadre du projet, hébergé sur Google Docs.",
+    url: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/edit?usp=sharing",
+    embedUrl: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/preview",
+    filename: "article-learn.pdf",
+    isExternal: true,
   },
   {
-    title: "Accord de collaboration volontaire",
-    description: "Cadre de la collaboration volontaire mise en place pour le projet.",
-    url: accord.url,
-    filename: "accord-collaboration-volontaire.pdf",
+    title: "Carrousel LEARN",
+    description: "Carrousel visuel du programme LEARN au format PDF.",
+    url: carrousel.url,
+    embedUrl: carrousel.url,
+    filename: "carrousel-learn.pdf",
+    isExternal: false,
   },
 ];
 
