@@ -1,0 +1,79 @@
+import { motion } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    q: "Quels services proposez-vous ?",
+    a: "J'accompagne marques, indépendants et entreprises sur la communication digitale et le marketing : création de contenus (carrousels, posts, vidéos), community management, email marketing, stratégies social media (TikTok, Instagram, Facebook) et identité visuelle.",
+  },
+  {
+    q: "Travaillez-vous à distance ou uniquement à Lomé ?",
+    a: "Les deux. Je suis basé à Lomé (Togo) et je collabore avec des clients sur place comme à distance — partout en Afrique et à l'international.",
+  },
+  {
+    q: "Combien coûte une prestation ?",
+    a: "Chaque projet est unique : le tarif dépend du périmètre, des livrables et de la durée. Envoyez-moi un message via le formulaire de contact avec votre besoin, je vous reviens avec une proposition adaptée.",
+  },
+  {
+    q: "Quels outils utilisez-vous ?",
+    a: "Canva, CapCut, Premiere Pro, Brevo, HubSpot, Meta Business Suite, Notion, Google Workspace — entre autres. Je m'adapte aux outils utilisés par mon client.",
+  },
+  {
+    q: "Quel est votre délai de réponse ?",
+    a: "Je réponds à la plupart des messages en moins de 24h ouvrées. Pour une question rapide, le chatbot en bas à droite peut aussi vous renseigner instantanément.",
+  },
+  {
+    q: "Pouvez-vous gérer un compte de A à Z ?",
+    a: "Oui — de la stratégie à la création de contenus, en passant par la publication, le community management et l'analyse des performances.",
+  },
+];
+
+const FAQ = () => {
+  return (
+    <section id="faq" className="py-20 sm:py-32 relative">
+      <div className="container max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 sm:mb-16 text-center"
+        >
+          <div className="text-sm uppercase tracking-[0.3em] text-primary mb-6">— FAQ</div>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
+            Questions <span className="text-gradient italic">fréquentes</span>
+          </h2>
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mt-6 leading-relaxed">
+            Tout ce que vous devez savoir avant de démarrer une collaboration.
+          </p>
+        </motion.div>
+
+        <Accordion type="single" collapsible className="space-y-3">
+          {faqs.map((faq, i) => (
+            <motion.div
+              key={faq.q}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+            >
+              <AccordionItem
+                value={`item-${i}`}
+                className="bg-card-gradient border border-border rounded-2xl px-5 sm:px-6 data-[state=open]:border-primary/40 transition-colors"
+              >
+                <AccordionTrigger className="font-display text-base sm:text-lg font-semibold text-left hover:no-underline py-5">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-sm sm:text-base pb-5">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+};
+
+export default FAQ;
