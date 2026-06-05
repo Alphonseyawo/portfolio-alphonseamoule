@@ -3,8 +3,10 @@ import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Services from "@/components/portfolio/Services";
 import Projects from "@/components/portfolio/Projects";
+import FAQ from "@/components/portfolio/FAQ";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
+import Chatbot from "@/components/portfolio/Chatbot";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -26,8 +28,10 @@ const Index = () => {
       <About />
       <Services />
       <Projects />
+      <FAQ />
       <Contact />
       <Footer />
+      <Chatbot />
     </main>
   );
 };
