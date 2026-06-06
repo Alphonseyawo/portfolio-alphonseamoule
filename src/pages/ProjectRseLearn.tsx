@@ -126,11 +126,25 @@ const ProjectRseLearn = () => {
               </div>
 
               <div className="mt-8 rounded-2xl overflow-hidden border border-border bg-secondary/30">
-                <iframe
-                  src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`}
-                  title={doc.title}
-                  className="w-full h-[480px]"
-                />
+                {doc.images ? (
+                  <div className="grid gap-2 p-2 max-h-[480px] overflow-y-auto">
+                    {doc.images.map((src, idx) => (
+                      <img
+                        key={src}
+                        src={src}
+                        alt={`${doc.title} — page ${idx + 1}`}
+                        loading="lazy"
+                        className="w-full h-auto rounded-xl"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <iframe
+                    src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`}
+                    title={doc.title}
+                    className="w-full h-[480px]"
+                  />
+                )}
               </div>
             </motion.div>
           ))}
