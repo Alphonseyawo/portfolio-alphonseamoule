@@ -3,6 +3,13 @@ import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import carrousel from "@/assets/rse/carrousel-learn.pdf.asset.json";
+import carrouselPage1 from "@/assets/rse/carrousel-pages/page-1.jpg.asset.json";
+import carrouselPage2 from "@/assets/rse/carrousel-pages/page-2.jpg.asset.json";
+import carrouselPage3 from "@/assets/rse/carrousel-pages/page-3.jpg.asset.json";
+import carrouselPage4 from "@/assets/rse/carrousel-pages/page-4.jpg.asset.json";
+import carrouselPage5 from "@/assets/rse/carrousel-pages/page-5.jpg.asset.json";
+
+const carrouselPages = [carrouselPage1, carrouselPage2, carrouselPage3, carrouselPage4, carrouselPage5];
 
 const documents = [
   {
