@@ -14,7 +14,7 @@ const schema = z.object({
 const Contact = () => {
   const links = [
     { label: "Email", value: "amoulealphonse38@gmail.com", href: "mailto:amoulealphonse38@gmail.com", icon: Mail },
-    { label: "Téléphone", value: "+228 70 29 03 66", href: "tel:+22870290366", icon: Phone },
+    { label: "Téléphone / WhatsApp", value: "+228 70 29 03 66", href: "https://wa.me/22870290366", icon: Phone },
     { label: "Localisation", value: "Lomé — Hédranawoé, Togo", href: "#", icon: MapPin },
   ];
 

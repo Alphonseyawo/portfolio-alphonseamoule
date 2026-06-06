@@ -26,6 +26,7 @@ const projects = [
     title: "Campagnes Brevo & Workflows",
     desc: "Mise en place de campagnes emailing et de scénarios d'automatisation, depuis la segmentation jusqu'à la mesure des performances.",
     tags: ["Brevo", "HubSpot", "Automation"],
+    href: "https://my.brevo.com/template/_XMzKbcCCSxlVas95gckEsrm64sa4vJXyM3OmnWXULv4mwiiiDME6K7sja4",
   },
   {
     n: "04",
