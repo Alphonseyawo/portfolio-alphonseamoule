@@ -3,6 +3,13 @@ import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import carrousel from "@/assets/rse/carrousel-learn.pdf.asset.json";
+import carrouselPage1 from "@/assets/rse/carrousel-pages/page-1.jpg.asset.json";
+import carrouselPage2 from "@/assets/rse/carrousel-pages/page-2.jpg.asset.json";
+import carrouselPage3 from "@/assets/rse/carrousel-pages/page-3.jpg.asset.json";
+import carrouselPage4 from "@/assets/rse/carrousel-pages/page-4.jpg.asset.json";
+import carrouselPage5 from "@/assets/rse/carrousel-pages/page-5.jpg.asset.json";
+
+const carrouselPages = [carrouselPage1, carrouselPage2, carrouselPage3, carrouselPage4, carrouselPage5];
 
 const documents = [
   {
@@ -36,6 +43,7 @@ const documents = [
     embedUrl: carrousel.url,
     filename: "carrousel-learn.pdf",
     isExternal: false,
+    images: carrouselPages.map((p) => p.url),
   },
 ];
 
@@ -118,11 +126,25 @@ const ProjectRseLearn = () => {
               </div>
 
               <div className="mt-8 rounded-2xl overflow-hidden border border-border bg-secondary/30">
-                <iframe
-                  src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`}
-                  title={doc.title}
-                  className="w-full h-[480px]"
-                />
+                {doc.images ? (
+                  <div className="grid gap-2 p-2 max-h-[480px] overflow-y-auto">
+                    {doc.images.map((src, idx) => (
+                      <img
+                        key={src}
+                        src={src}
+                        alt={`${doc.title} — page ${idx + 1}`}
+                        loading="lazy"
+                        className="w-full h-auto rounded-xl"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <iframe
+                    src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`}
+                    title={doc.title}
+                    className="w-full h-[480px]"
+                  />
+                )}
               </div>
             </motion.div>
           ))}
