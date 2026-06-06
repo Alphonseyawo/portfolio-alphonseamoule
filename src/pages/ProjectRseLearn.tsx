@@ -6,27 +6,27 @@ import carrousel from "@/assets/rse/carrousel-learn.pdf.asset.json";
 
 const documents = [
   {
-    title: "Article — Programme LEARN",
+    title: "ARTICLE SEO",
     description: "Article rédigé dans le cadre du projet, hébergé sur Google Docs.",
     url: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/edit?usp=sharing",
     embedUrl: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/preview",
-    filename: "article-learn.pdf",
+    filename: "article-seo.pdf",
     isExternal: true,
   },
   {
-    title: "Article — Communication digitale",
+    title: "COMMUNICATION OFFICIELLE",
     description: "Article rédigé pendant le stage, hébergé sur Google Docs.",
     url: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/edit?usp=sharing",
     embedUrl: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/preview",
-    filename: "article-communication.pdf",
+    filename: "communication-officielle.pdf",
     isExternal: true,
   },
   {
-    title: "Article — Marketing & Stratégie",
+    title: "ARTICLES SCI",
     description: "Article rédigé pendant le stage, hébergé sur Google Docs.",
     url: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/edit?usp=sharing",
     embedUrl: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/preview",
-    filename: "article-marketing.pdf",
+    filename: "articles-sci.pdf",
     isExternal: true,
   },
   {
