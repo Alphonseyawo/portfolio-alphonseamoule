@@ -23,9 +23,49 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { messages } = await req.json();
+    const body = await req.json();
+    const rawMessages = body?.messages;
+
+    if (!Array.isArray(rawMessages) || rawMessages.length === 0) {
+      return new Response(JSON.stringify({ error: "Requête invalide." }), {
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+    if (rawMessages.length > 20) {
+      return new Response(JSON.stringify({ error: "Trop de messages dans la conversation." }), {
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const messages: Array<{ role: "user" | "assistant"; content: string }> = [];
+    for (const m of rawMessages) {
+      if (!m || typeof m !== "object") {
+        return new Response(JSON.stringify({ error: "Message invalide." }), {
+          status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+      const role = m.role;
+      const content = m.content;
+      if (role !== "user" && role !== "assistant") {
+        return new Response(JSON.stringify({ error: "Rôle de message non autorisé." }), {
+          status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+      if (typeof content !== "string" || content.length === 0 || content.length > 1000) {
+        return new Response(JSON.stringify({ error: "Contenu de message invalide." }), {
+          status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+      messages.push({ role, content });
+    }
+
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY manquant");
+    if (!LOVABLE_API_KEY) {
+      console.error("LOVABLE_API_KEY manquant");
+      return new Response(JSON.stringify({ error: "Une erreur interne est survenue." }), {
+        status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
@@ -52,7 +92,8 @@ Deno.serve(async (req) => {
     }
     if (!response.ok) {
       const t = await response.text();
-      return new Response(JSON.stringify({ error: t }), {
+      console.error("Upstream AI error:", response.status, t);
+      return new Response(JSON.stringify({ error: "Une erreur interne est survenue." }), {
         status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
@@ -61,7 +102,8 @@ Deno.serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
     });
   } catch (e) {
-    return new Response(JSON.stringify({ error: String(e) }), {
+    console.error("Chat function error:", e);
+    return new Response(JSON.stringify({ error: "Une erreur interne est survenue." }), {
       status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
