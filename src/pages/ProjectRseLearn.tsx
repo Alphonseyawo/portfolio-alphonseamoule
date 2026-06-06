@@ -14,6 +14,22 @@ const documents = [
     isExternal: true,
   },
   {
+    title: "Article — Communication digitale",
+    description: "Article rédigé pendant le stage, hébergé sur Google Docs.",
+    url: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/edit?usp=sharing",
+    embedUrl: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/preview",
+    filename: "article-communication.pdf",
+    isExternal: true,
+  },
+  {
+    title: "Article — Marketing & Stratégie",
+    description: "Article rédigé pendant le stage, hébergé sur Google Docs.",
+    url: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/edit?usp=sharing",
+    embedUrl: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/preview",
+    filename: "article-marketing.pdf",
+    isExternal: true,
+  },
+  {
     title: "Carrousel LEARN",
     description: "Carrousel visuel du programme LEARN au format PDF.",
     url: carrousel.url,
