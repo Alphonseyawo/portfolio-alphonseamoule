@@ -43,6 +43,7 @@ const documents = [
     embedUrl: carrousel.url,
     filename: "carrousel-learn.pdf",
     isExternal: false,
+    images: carrouselPages.map((p) => p.url),
   },
 ];
 
