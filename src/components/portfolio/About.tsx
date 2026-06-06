@@ -56,12 +56,12 @@ const About = () => {
       desc: "Conception et déploiement de stratégies social media performantes adaptées au marché africain.",
     },
     {
-      org: "Néhémiah Éducation",
+      org: "HP LIFE",
       title: "E-mails professionnels",
       desc: "Rédaction professionnelle, étiquette numérique et communication écrite efficace en contexte business.",
     },
     {
-      org: "HP LIFE",
+      org: "NÉHÉMIAH ÉDUCATION",
       title: "Formation immersive intensive",
       desc: "Compétences entrepreneuriales, business digital et outils numériques pour développer son activité.",
     },
