@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Quels outils utilisez-vous ?",
-    a: "Canva, CapCut, Premiere Pro, Brevo, HubSpot, Meta Business Suite, Notion, Google Workspace — entre autres. Je m'adapte aux outils utilisés par mon client.",
+    a: "Canva, CapCut, Photoshop, Brevo, HubSpot, Meta Business Suite, Vn, Google My Business — entre autres. Je m'adapte aux outils utilisés par mon client.",
   },
   {
     q: "Quel est votre délai de réponse ?",
