@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="w-9 h-9 rounded-full overflow-hidden border border-border bg-secondary">
               <img src={avatar.url} alt="Alphonse Yawo AMOULE" className="w-full h-full object-cover" />
             </div>
-            <span className="hidden sm:inline">Alphonse.</span>
+            <span className="hidden sm:inline tracking-[0.2em] text-sm">PORTFOLIO</span>
           </a>
 
           <div className="hidden md:flex items-center gap-1">

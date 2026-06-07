@@ -70,7 +70,8 @@ const Hero = () => {
               <img
                 src={portrait}
                 alt="Portrait de Alphonse Yawo AMOULE"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ objectPosition: "50% 30%" }}
               />
             </div>
 
