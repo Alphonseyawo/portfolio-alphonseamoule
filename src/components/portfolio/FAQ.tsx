@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -29,6 +31,8 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <section id="faq" className="py-20 sm:py-32 relative">
       <div className="container max-w-4xl">
@@ -48,29 +52,48 @@ const FAQ = () => {
           </p>
         </motion.div>
 
-        <Accordion type="single" collapsible className="space-y-3">
-          {faqs.map((faq, i) => (
+        <button
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          className="w-full flex items-center justify-between gap-4 bg-card-gradient border border-border rounded-2xl px-6 py-5 hover:border-primary/40 transition-colors"
+        >
+          <span className="flex items-center gap-3 font-display text-base sm:text-lg font-semibold text-left">
+            <HelpCircle className="w-5 h-5 text-primary shrink-0" />
+            Voir toutes les questions fréquentes
+          </span>
+          <ChevronDown
+            className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        <AnimatePresence initial={false}>
+          {open && (
             <motion.div
-              key={faq.q}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="overflow-hidden"
             >
-              <AccordionItem
-                value={`item-${i}`}
-                className="bg-card-gradient border border-border rounded-2xl px-5 sm:px-6 data-[state=open]:border-primary/40 transition-colors"
-              >
-                <AccordionTrigger className="font-display text-base sm:text-lg font-semibold text-left hover:no-underline py-5">
-                  {faq.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed text-sm sm:text-base pb-5">
-                  {faq.a}
-                </AccordionContent>
-              </AccordionItem>
+              <Accordion type="single" collapsible className="space-y-3 mt-4">
+                {faqs.map((faq, i) => (
+                  <AccordionItem
+                    key={faq.q}
+                    value={`item-${i}`}
+                    className="bg-card-gradient border border-border rounded-2xl px-5 sm:px-6 data-[state=open]:border-primary/40 transition-colors"
+                  >
+                    <AccordionTrigger className="font-display text-base sm:text-lg font-semibold text-left hover:no-underline py-5">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed text-sm sm:text-base pb-5">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </motion.div>
-          ))}
-        </Accordion>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
