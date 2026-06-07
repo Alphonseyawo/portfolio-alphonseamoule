@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div>© {year} Alphonse Yawo AMOULE — Tous droits réservés.</div>
           <div className="flex items-center gap-4">
-            <
+            <a
               href="#home"
               aria-label="Retour en haut"
               className="w-9 h-9 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
