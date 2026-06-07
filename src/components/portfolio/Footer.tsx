@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.threads.com/@alphonseamoule?xmt=AQG0D04L2b6SljvJw_sJ67lRuipQlsCez1t5W17gIpv9MA4"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/alphonse-amoule-2a472534b"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -75,8 +75,7 @@ const Footer = () => {
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div>© {year} Alphonse Yawo AMOULE — Tous droits réservés.</div>
           <div className="flex items-center gap-4">
-            <span className="font-display">Designed with care in Lomé 🇹🇬</span>
-            <a
+            <
               href="#home"
               aria-label="Retour en haut"
               className="w-9 h-9 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
