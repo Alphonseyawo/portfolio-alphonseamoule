@@ -64,12 +64,13 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative aspect-[4/5] max-w-md mx-auto">
-            <div className="absolute -inset-4 bg-primary/20 rounded-[2rem] blur-3xl" />
-            <div className="relative h-full rounded-[2rem] overflow-hidden border border-border shadow-elevated bg-card-gradient">
+          <div className="relative aspect-square max-w-md mx-auto">
+            <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl" />
+            <div className="relative h-full rounded-full overflow-hidden border border-border shadow-elevated bg-card-gradient">
               <img src={portrait} alt="Portrait de Alphonse Yawo AMOULE" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
+
 
             {/* Floating badges */}
 
