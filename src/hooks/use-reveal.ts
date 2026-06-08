@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 /**
- * Applies a global fade-in + scale-up reveal animation on scroll
- * to common text/media elements within <main>.
+ * Premium reveal animation: fade + slide-up + scale + un-blur,
+ * with stagger by sibling index. Applied globally inside <main>.
  */
 export const useReveal = () => {
   useEffect(() => {
@@ -22,7 +22,19 @@ export const useReveal = () => {
       document.querySelectorAll<HTMLElement>(selector)
     ).filter((el) => !el.closest("[data-no-reveal]"));
 
-    elements.forEach((el) => el.classList.add("lv-reveal"));
+    elements.forEach((el) => {
+      el.classList.add("lv-reveal");
+      const parent = el.parentElement;
+      if (parent) {
+        const siblings = Array.from(parent.children).filter((c) =>
+          (c as HTMLElement).classList?.contains("lv-reveal")
+        );
+        const idx = siblings.indexOf(el);
+        if (idx >= 0) {
+          el.style.transitionDelay = `${Math.min(idx * 80, 400)}ms`;
+        }
+      }
+    });
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -33,7 +45,7 @@ export const useReveal = () => {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
     );
 
     elements.forEach((el) => io.observe(el));
