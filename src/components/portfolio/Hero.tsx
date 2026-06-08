@@ -27,8 +27,8 @@ const Hero = () => {
           </div>
 
           <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
-            Marketing<br />
-            digital <span className="text-gradient italic font-medium">&</span><br />
+            Marketing&nbsp;digital<br />
+            <span className="text-gradient italic font-medium">&</span><br />
             <span className="text-primary">communication.</span>
           </h1>
 
