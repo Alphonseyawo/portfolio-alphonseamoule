@@ -127,19 +127,96 @@
     mix-blend-mode: overlay;
   }
 
-  /* Global fade-in + scale-up reveal */
+  /* ========== Premium reveal (fade + slide-up + scale, staggered) ========== */
   .lv-reveal {
     opacity: 0;
-    transform: scale(0.94);
-    transition: opacity 0.9s var(--transition-smooth), transform 0.9s var(--transition-smooth);
-    will-change: opacity, transform;
+    transform: translateY(28px) scale(0.96);
+    transition:
+      opacity 0.9s var(--transition-smooth),
+      transform 1s var(--transition-smooth),
+      filter 0.9s var(--transition-smooth);
+    filter: blur(6px);
+    will-change: opacity, transform, filter;
   }
   .lv-reveal.lv-in {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
   @media (prefers-reduced-motion: reduce) {
-    .lv-reveal { opacity: 1; transform: none; transition: none; }
+    .lv-reveal { opacity: 1; transform: none; filter: none; transition: none; }
+  }
+
+  /* ========== Glassmorphism ========== */
+  .glass {
+    background: hsl(var(--card) / 0.45);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid hsl(var(--foreground) / 0.08);
+    box-shadow: inset 0 1px 0 hsl(var(--foreground) / 0.06), 0 20px 60px -20px hsl(220 50% 2% / 0.6);
+  }
+
+  /* ========== Floating animation ========== */
+  @keyframes lv-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-14px) rotate(0.5deg); }
+  }
+  .lv-float { animation: lv-float 7s ease-in-out infinite; }
+
+  /* ========== Animated glow CTA ========== */
+  @keyframes lv-glow-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.55), 0 0 30px -5px hsl(var(--primary) / 0.45); }
+    50%      { box-shadow: 0 0 0 14px hsl(var(--primary) / 0), 0 0 60px -5px hsl(var(--primary) / 0.7); }
+  }
+  .lv-cta-glow { animation: lv-glow-pulse 2.6s ease-in-out infinite; }
+
+  /* ========== Mouse-following ambient gradient ========== */
+  .lv-mouse-glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(
+      600px circle at var(--mx, 50%) var(--my, 50%),
+      hsl(var(--primary) / 0.10),
+      transparent 55%
+    );
+    transition: background 0.15s ease-out;
+    mix-blend-mode: screen;
+  }
+
+  /* ========== Premium card hover ========== */
+  .lv-premium-card,
+  main .bg-card-gradient {
+    position: relative;
+    transition: transform 0.6s var(--transition-smooth), box-shadow 0.6s var(--transition-smooth), border-color 0.6s var(--transition-smooth);
+  }
+  main .bg-card-gradient:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -20px hsl(220 50% 2% / 0.7), 0 0 0 1px hsl(var(--primary) / 0.35), 0 0 40px -10px hsl(var(--primary) / 0.35);
+  }
+
+  /* ========== Loading sequence ========== */
+  @keyframes lv-loader-bar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  @keyframes lv-loader-fade {
+    to { opacity: 0; visibility: hidden; }
+  }
+  .lv-loader {
+    position: fixed; inset: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: center;
+    background: hsl(var(--background));
+    animation: lv-loader-fade 0.8s ease 1.4s forwards;
+  }
+  .lv-loader::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    animation: lv-loader-bar 1.3s var(--transition-smooth);
   }
 }
+
 
