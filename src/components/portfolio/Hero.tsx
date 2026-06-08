@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-glow transition-all duration-500"
+              className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-glow transition-all duration-500 lv-cta-glow"
             >
               Voir mes projets
               <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
@@ -75,8 +75,8 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative aspect-square w-full max-w-md mx-auto">
-            <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl" />
+          <div className="relative aspect-square w-full max-w-md mx-auto lv-float">
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
             <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated bg-card-gradient">
               <img
                 src={portrait}

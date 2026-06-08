@@ -26,7 +26,9 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background relative">
+      <Loader />
+      <MouseGlow />
       <Navbar />
       <Hero />
       <About />
