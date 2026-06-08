@@ -27,10 +27,12 @@ const Hero = () => {
             Disponible pour de nouveaux projets
           </div>
 
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
-            Marketing&nbsp;digital<br />
-            <span className="text-gradient italic font-medium">&</span><br />
-            <span className="text-primary">communication.</span>
+          <h1 data-no-reveal className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
+            <SplitLine text="Marketing digital" startDelay={0.2} />
+            <br />
+            <SplitLine text="&" className="text-gradient italic font-medium" startDelay={0.7} />
+            <br />
+            <SplitLine text="communication." className="text-primary" startDelay={0.85} />
           </h1>
 
           <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
