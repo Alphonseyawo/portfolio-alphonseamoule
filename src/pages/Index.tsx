@@ -7,6 +7,8 @@ import FAQ from "@/components/portfolio/FAQ";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
 import Chatbot from "@/components/portfolio/Chatbot";
+import MouseGlow from "@/components/portfolio/MouseGlow";
+import Loader from "@/components/portfolio/Loader";
 import { useEffect } from "react";
 import { useReveal } from "@/hooks/use-reveal";
 
