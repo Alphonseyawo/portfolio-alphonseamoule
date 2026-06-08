@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, MapPin } from "lucide-react";
+import { ArrowDown, Mail, MapPin, FileDown } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
+import cvAsset from "@/assets/cv-alphonse-amoule.pdf.asset.json";
 
 const Hero = () => {
   return (
@@ -54,6 +55,16 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300"
             >
               Me contacter
+            </a>
+            <a
+              href={cvAsset.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="CV-Alphonse-AMOULE.pdf"
+              className="group inline-flex items-center gap-2 px-8 py-4 rounded-full border border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            >
+              <FileDown className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+              Télécharger CV
             </a>
           </div>
         </motion.div>
