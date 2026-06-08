@@ -8,8 +8,10 @@ import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
 import Chatbot from "@/components/portfolio/Chatbot";
 import { useEffect } from "react";
+import { useReveal } from "@/hooks/use-reveal";
 
 const Index = () => {
+  useReveal();
   useEffect(() => {
     document.title = "Alphonse Yawo AMOULE — Marketing Digital & Communication";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
