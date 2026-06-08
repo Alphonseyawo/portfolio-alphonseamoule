@@ -126,4 +126,20 @@
     pointer-events: none;
     mix-blend-mode: overlay;
   }
+
+  /* Global fade-in + scale-up reveal */
+  .lv-reveal {
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity 0.9s var(--transition-smooth), transform 0.9s var(--transition-smooth);
+    will-change: opacity, transform;
+  }
+  .lv-reveal.lv-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lv-reveal { opacity: 1; transform: none; transition: none; }
+  }
 }
+
