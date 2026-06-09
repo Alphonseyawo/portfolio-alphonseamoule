@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, MapPin, FileDown } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
-import cvAsset from "@/assets/cv-alphonse-amoule.pdf.asset.json";
 
 /** Splits text into characters, each fading + sliding up with stagger. */
 const SplitLine = ({
@@ -105,7 +103,7 @@ const Hero = () => {
               Me contacter
             </a>
             <a
-              href={cvAsset.url}
+              href="/CV-Alphonse-AMOULE.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download="CV-Alphonse-AMOULE.pdf"
@@ -127,7 +125,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
             <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated bg-card-gradient">
               <img
-                src={portrait}
+                src="/portrait.jpg"
                 alt="Portrait de Alphonse Yawo AMOULE"
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{ objectPosition: "50% 30%" }}

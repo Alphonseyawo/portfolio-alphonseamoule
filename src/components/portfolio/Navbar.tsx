@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import avatar from "@/assets/avatar-mask.jpg.asset.json";
 
 const navItems = [
   { label: "À propos", href: "#about" },
@@ -28,7 +27,7 @@ const Navbar = () => {
         }`}>
           <a href="#home" className="flex items-center gap-2 font-display font-bold">
             <div className="w-9 h-9 rounded-full overflow-hidden border border-border bg-secondary">
-              <img src={avatar.url} alt="Alphonse Yawo AMOULE" className="w-full h-full object-cover" />
+              <img src="/IMG_1052.JPG" alt="Alphonse Yawo AMOULE" className="w-full h-full object-cover" />
             </div>
             <span className="hidden sm:inline tracking-[0.2em] text-sm">PORTFOLIO</span>
           </a>

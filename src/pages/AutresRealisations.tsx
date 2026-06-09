@@ -2,20 +2,14 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import drSomali from "@/assets/realisations/dr-somali.png.asset.json";
-import joelAmeyou from "@/assets/realisations/joel-ameyou.png.asset.json";
-import moukaila from "@/assets/realisations/moukaila.png.asset.json";
-import bienvenue from "@/assets/realisations/bienvenue-learn.png.asset.json";
-import alpha from "@/assets/realisations/alpha-marketing.jpg.asset.json";
-import partenaires from "@/assets/realisations/partenaires-learn.png.asset.json";
 
 const visuals = [
-  { src: bienvenue.url, title: "Bienvenue — Programme LEARN" },
-  { src: drSomali.url, title: "Conférence LEARN — Dr Franck Kossi SOMALI" },
-  { src: joelAmeyou.url, title: "Speaker — AMEYOU Comlan Joél" },
-  { src: moukaila.url, title: "Speaker — MOUKAILA Moubarak" },
-  { src: partenaires.url, title: "Partenaires — Programme LEARN" },
-  { src: alpha.url, title: "Alpha Marketing — Nos offres" },
+  { src: "/bienvenue-learn.png", title: "Bienvenue — Programme LEARN" },
+  { src: "/dr-somali.png", title: "Conférence LEARN — Dr Franck Kossi SOMALI" },
+  { src: "/joel-ameyou.png", title: "Speaker — AMEYOU Comlan Joél" },
+  { src: "/moukaila.png", title: "Speaker — MOUKAILA Moubarak" },
+  { src: "/partenaires-learn.png", title: "Partenaires — Programme LEARN" },
+  { src: "/alpha-marketing.jpg", title: "Alpha Marketing — Nos offres" },
 ];
 
 const AutresRealisations = () => {

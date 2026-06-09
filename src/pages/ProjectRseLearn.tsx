@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import carrousel from "@/assets/rse/carrousel-learn.pdf.asset.json";
-import carrouselPage1 from "@/assets/rse/carrousel-pages/page-1.jpg.asset.json";
-import carrouselPage2 from "@/assets/rse/carrousel-pages/page-2.jpg.asset.json";
-import carrouselPage3 from "@/assets/rse/carrousel-pages/page-3.jpg.asset.json";
-import carrouselPage4 from "@/assets/rse/carrousel-pages/page-4.jpg.asset.json";
-import carrouselPage5 from "@/assets/rse/carrousel-pages/page-5.jpg.asset.json";
 
-const carrouselPages = [carrouselPage1, carrouselPage2, carrouselPage3, carrouselPage4, carrouselPage5];
+const carrouselPages = [
+  "/carrousel-page-1.jpg",
+  "/carrousel-page-2.jpg",
+  "/carrousel-page-3.jpg",
+  "/carrousel-page-4.jpg",
+  "/carrousel-page-5.jpg",
+];
 
 const documents = [
   {
@@ -39,11 +39,11 @@ const documents = [
   {
     title: "Carrousel LEARN",
     description: "Carrousel visuel du programme LEARN au format PDF.",
-    url: carrousel.url,
-    embedUrl: carrousel.url,
+    url: "/carrousel-learn.pdf",
+    embedUrl: "/carrousel-learn.pdf",
     filename: "carrousel-learn.pdf",
     isExternal: false,
-    images: carrouselPages.map((p) => p.url),
+    images: carrouselPages,
   },
 ];
 
