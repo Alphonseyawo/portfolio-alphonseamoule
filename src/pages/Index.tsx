@@ -18,10 +18,7 @@ const Index = () => {
     document.title = "Alphonse Yawo AMOULE — Marketing Digital & Communication";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute(
-      "content",
-      "Portfolio de Alphonse Yawo AMOULE — spécialiste marketing digital, création de contenu, graphisme et email marketing à Lomé."
-    );
+    meta.setAttribute("content", "Portfolio de Alphonse Yawo AMOULE — spécialiste marketing digital, création de contenu, graphisme et email marketing à Lomé.");
     document.head.appendChild(meta);
   }, []);
 
@@ -33,9 +30,9 @@ const Index = () => {
       <Hero />
       <About />
       <Services />
-        <Projects />
-        <Contact />
-        <FAQ />
+      <Projects />
+      <Contact />
+      <FAQ />
       <Footer />
       <Chatbot />
     </main>

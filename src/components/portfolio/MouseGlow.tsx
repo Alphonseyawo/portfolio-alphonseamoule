@@ -1,9 +1,7 @@
 import { useEffect, useRef } from "react";
 
-/** Fixed full-viewport radial gradient that follows the cursor. */
 const MouseGlow = () => {
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     let raf = 0;
     const onMove = (e: MouseEvent) => {
@@ -16,12 +14,8 @@ const MouseGlow = () => {
       });
     };
     window.addEventListener("mousemove", onMove, { passive: true });
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      if (raf) cancelAnimationFrame(raf);
-    };
+    return () => { window.removeEventListener("mousemove", onMove); if (raf) cancelAnimationFrame(raf); };
   }, []);
-
   return <div ref={ref} className="lv-mouse-glow" aria-hidden="true" />;
 };
 

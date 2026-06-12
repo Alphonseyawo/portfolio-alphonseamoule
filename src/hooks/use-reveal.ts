@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 
-/**
- * Premium reveal animation: fade + slide-up + scale + un-blur,
- * with stagger by sibling index. Applied globally inside <main>.
- */
+/** Premium reveal: animations replay every time element enters viewport (scroll up or down) */
 export const useReveal = () => {
   useEffect(() => {
     const selector = [
