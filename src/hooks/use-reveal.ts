@@ -41,7 +41,8 @@ export const useReveal = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("lv-in");
-            io.unobserve(entry.target);
+          } else {
+            entry.target.classList.remove("lv-in");
           }
         });
       },

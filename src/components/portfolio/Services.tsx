@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Palette, Video, Mail, Share2, Layout, Bot } from "lucide-react";
+import { Palette, Video, Mail, Share2, LayoutGrid as Layout, Bot } from "lucide-react";
 
 const services = [
   {
@@ -47,7 +47,7 @@ const Services = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="max-w-3xl mb-20"
         >
@@ -63,7 +63,7 @@ const Services = () => {
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -6 }}
               className="group relative bg-card-gradient border border-border rounded-3xl p-8 hover:border-primary/40 transition-all duration-500 overflow-hidden"
@@ -91,7 +91,7 @@ const Services = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="mt-16 flex flex-wrap gap-3 justify-center"
         >

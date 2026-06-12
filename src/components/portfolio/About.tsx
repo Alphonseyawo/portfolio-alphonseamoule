@@ -73,7 +73,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="max-w-3xl mb-16 sm:mb-20"
         >
@@ -101,7 +101,7 @@ const About = () => {
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-card-gradient border border-border rounded-3xl p-6 sm:p-8"
             >
@@ -124,7 +124,7 @@ const About = () => {
                 key={i}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group relative pl-6 sm:pl-8 border-l-2 border-border hover:border-primary transition-colors"
               >
@@ -155,7 +155,7 @@ const About = () => {
                 key={cert.org}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="bg-card-gradient border border-border rounded-3xl p-5 sm:p-6 hover:border-primary/40 transition-colors"
               >

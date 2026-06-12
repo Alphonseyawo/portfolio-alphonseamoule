@@ -50,7 +50,7 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
           >
             <div className="text-sm uppercase tracking-[0.3em] text-primary mb-6">— Contact</div>
@@ -104,7 +104,7 @@ const Contact = () => {
             onSubmit={onSubmit}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-card-gradient border border-border rounded-3xl p-6 sm:p-8 space-y-5"
           >

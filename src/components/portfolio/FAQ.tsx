@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown, CircleHelp as HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -39,7 +39,7 @@ const FAQ = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="mb-12 sm:mb-16 text-center"
         >

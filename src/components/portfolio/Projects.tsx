@@ -45,7 +45,7 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-20"
         >
@@ -72,7 +72,7 @@ const Projects = () => {
               {...linkProps}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group block bg-card-gradient border border-border rounded-3xl p-8 lg:p-12 hover:border-primary/40 transition-all duration-500 relative overflow-hidden"
             >
