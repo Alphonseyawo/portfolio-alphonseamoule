@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Palette, Video, Mail, Share2, Layout, Bot } from "lucide-react";
+import { Palette, Video, Mail, Share2, LayoutGrid as Layout, Bot } from "lucide-react";
 
 const services = [
   { icon: Share2, title: "Gestion réseaux sociaux", desc: "Stratégie, planification et publication sur TikTok, Instagram et Facebook pour engager votre audience.", tags: ["TikTok", "Instagram", "Facebook"] },

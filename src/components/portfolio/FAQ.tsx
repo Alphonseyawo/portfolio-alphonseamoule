@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown, CircleHelp as HelpCircle } from "lucide-react";
 
 const faqs = [
   { q: "Quels services proposez-vous ?", a: "J'accompagne marques, indépendants et entreprises sur la communication digitale et le marketing : création de contenus (carrousels, posts, vidéos), community management, email marketing, stratégies social media (TikTok, Instagram, Facebook) et identité visuelle." },

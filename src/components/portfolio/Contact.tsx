@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowUpRight, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Send, Loader as Loader2 } from "lucide-react";
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
