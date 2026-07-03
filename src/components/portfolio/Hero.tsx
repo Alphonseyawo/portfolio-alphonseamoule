@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, MapPin, FileDown } from "lucide-react";
+import portraitAsset from "@/assets/portrait-mask.jpeg.asset.json";
 
 const SplitLine = ({ text, className = "", startDelay = 0 }: { text: string; className?: string; startDelay?: number }) => {
   const chars = Array.from(text);
   return (
-    <motion.span className={`inline-block ${className}`} initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { delayChildren: startDelay, staggerChildren: 0.04 } } }} aria-label={text}>
+    <motion.span className={`inline-block ${className}`} initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { delayChildren: startDelay, staggerChildren: 0.05 } } }} aria-label={text}>
       {chars.map((ch, i) => (
-        <motion.span key={i} aria-hidden="true" className="inline-block" style={{ whiteSpace: "pre" }} variants={{ hidden: { opacity: 0, y: "0.5em", filter: "blur(8px)" }, visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
+        <motion.span key={i} aria-hidden="true" className="inline-block" style={{ whiteSpace: "pre" }} variants={{ hidden: { opacity: 0, x: "0.8em", filter: "blur(6px)" }, visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
           {ch === " " ? "\u00A0" : ch}
         </motion.span>
       ))}
@@ -26,9 +27,9 @@ const Hero = () => (
         <h1 data-no-reveal className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
           <SplitLine text="Marketing digital" startDelay={0.2} />
           <br />
-          <SplitLine text="&" className="text-gradient italic font-medium" startDelay={0.7} />
+          <span className="text-gradient italic font-medium">&amp;</span>
           <br />
-          <SplitLine text="communication." className="text-primary" startDelay={0.85} />
+          <SplitLine text="communication." className="text-primary" startDelay={1.2} />
         </h1>
         <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
           Je suis <span className="text-foreground font-medium">Alphonse Yawo AMOULE</span>, créateur de contenus et stratège digital. Je transforme les idées en visuels qui captent et en campagnes qui convertissent.
@@ -47,7 +48,7 @@ const Hero = () => (
         <div className="relative aspect-square w-full max-w-md mx-auto lv-float">
           <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
           <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated bg-card-gradient">
-            <img src="/IMG_1052.JPG" alt="Portrait de Alphonse Yawo AMOULE" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "50% 30%" }} />
+            <img src={portraitAsset.url} alt="Portrait de Alphonse Yawo AMOULE" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "50% 30%" }} />
           </div>
           <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute -right-4 bottom-16 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-glow">
             <div className="text-xs opacity-80">Projets</div>
