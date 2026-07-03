@@ -45,9 +45,7 @@ const ProjectRseLearn = () => {
                 <a href={doc.url} download={doc.filename} className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors"><Download className="w-4 h-4" />Télécharger</a>
               </div>
               <div className="mt-8 rounded-2xl overflow-hidden border border-border bg-secondary/30">
-                {doc.images ? (
-                  <div className="grid gap-2 p-2 max-h-[480px] overflow-y-auto">{doc.images.map((src, idx) => (<img key={src} src={src} alt={`${doc.title} — page ${idx + 1}`} loading="lazy" className="w-full h-auto rounded-xl" />))}</div>
-                ) : (<iframe src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`} title={doc.title} className="w-full h-[480px]" />)}
+                <iframe src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`} title={doc.title} className="w-full h-[480px]" />
               </div>
             </motion.div>
           ))}
