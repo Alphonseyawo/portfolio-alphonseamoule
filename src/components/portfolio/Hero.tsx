@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, MapPin, FileDown } from "lucide-react";
-import portraitAsset from "@/assets/portrait-mask.jpeg.asset.json";
+import portraitAsset from "@/assets/portrait-suit.jpg.asset.json";
 
 const SplitLine = ({ text, className = "", startDelay = 0 }: { text: string; className?: string; startDelay?: number }) => {
   const chars = Array.from(text);
@@ -48,7 +48,7 @@ const Hero = () => (
         <div className="relative aspect-square w-full max-w-md mx-auto lv-float">
           <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
           <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated bg-card-gradient">
-            <img src={portraitAsset.url} alt="Portrait de Alphonse Yawo AMOULE" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "50% 30%" }} />
+            <img src={portraitAsset.url} alt="Portrait de Alphonse Yawo AMOULE" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "50% 20%" }} />
           </div>
           <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute -right-4 bottom-16 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-glow">
             <div className="text-xs opacity-80">Projets</div>
