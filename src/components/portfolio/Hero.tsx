@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, MapPin, FileDown } from "lucide-react";
+import portraitAsset from "@/assets/portrait-mask.jpeg.asset.json";
 
 const SplitLine = ({ text, className = "", startDelay = 0 }: { text: string; className?: string; startDelay?: number }) => {
   const chars = Array.from(text);
   return (
-    <motion.span className={`inline-block ${className}`} initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { delayChildren: startDelay, staggerChildren: 0.04 } } }} aria-label={text}>
+    <motion.span className={`inline-block ${className}`} initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { delayChildren: startDelay, staggerChildren: 0.05 } } }} aria-label={text}>
       {chars.map((ch, i) => (
-        <motion.span key={i} aria-hidden="true" className="inline-block" style={{ whiteSpace: "pre" }} variants={{ hidden: { opacity: 0, y: "0.5em", filter: "blur(8px)" }, visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
+        <motion.span key={i} aria-hidden="true" className="inline-block" style={{ whiteSpace: "pre" }} variants={{ hidden: { opacity: 0, x: "0.8em", filter: "blur(6px)" }, visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
           {ch === " " ? "\u00A0" : ch}
         </motion.span>
       ))}
