@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-
-const carrouselPages = ["/carrousel-page-1.jpg", "/carrousel-page-2.jpg", "/carrousel-page-3.jpg", "/carrousel-page-4.jpg", "/carrousel-page-5.jpg"];
+import carrouselPdf from "@/assets/carrousel-learn-v2.pdf.asset.json";
 
 const documents = [
   { title: "ARTICLE SEO", description: "Article rédigé dans le cadre du projet, hébergé sur Google Docs.", url: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/edit?usp=sharing", embedUrl: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/preview", filename: "article-seo.pdf", isExternal: true },
   { title: "COMMUNICATION OFFICIELLE", description: "Article rédigé pendant le stage, hébergé sur Google Docs.", url: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/edit?usp=sharing", embedUrl: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/preview", filename: "communication-officielle.pdf", isExternal: true },
   { title: "ARTICLES SCI", description: "Article rédigé pendant le stage, hébergé sur Google Docs.", url: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/edit?usp=sharing", embedUrl: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/preview", filename: "articles-sci.pdf", isExternal: true },
-  { title: "Carrousel LEARN", description: "Carrousel visuel du programme LEARN au format PDF.", url: "/carrousel-learn.pdf", embedUrl: "/carrousel-learn.pdf", filename: "carrousel-learn.pdf", isExternal: false, images: carrouselPages },
+  { title: "Carrousel LEARN", description: "Carrousel visuel du programme LEARN au format PDF.", url: carrouselPdf.url, embedUrl: carrouselPdf.url, filename: "carrousel-learn.pdf", isExternal: false },
 ];
 
 const canvaLinks = [
