@@ -27,9 +27,9 @@ const Hero = () => (
         <h1 data-no-reveal className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
           <SplitLine text="Marketing digital" startDelay={0.2} />
           <br />
-          <SplitLine text="&" className="text-gradient italic font-medium" startDelay={0.7} />
+          <span className="text-gradient italic font-medium">&amp;</span>
           <br />
-          <SplitLine text="communication." className="text-primary" startDelay={0.85} />
+          <SplitLine text="communication." className="text-primary" startDelay={1.2} />
         </h1>
         <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
           Je suis <span className="text-foreground font-medium">Alphonse Yawo AMOULE</span>, créateur de contenus et stratège digital. Je transforme les idées en visuels qui captent et en campagnes qui convertissent.
