@@ -25,7 +25,7 @@ const Navbar = () => {
         <nav className={`flex items-center justify-between rounded-full px-4 sm:px-6 py-2.5 transition-all duration-500 ${scrolled ? "bg-background/80 backdrop-blur-xl border border-border shadow-elevated" : "bg-background/40 backdrop-blur-sm border border-border/50"}`}>
           <a href="#home" className="flex items-center gap-2 font-display font-bold">
             <div className="w-9 h-9 rounded-full overflow-hidden border border-border bg-secondary">
-              <img src="/portrait-whatsapp.jpeg" alt="Alphonse Yawo AMOULE" className="w-full h-full object-cover" />
+              <img src="/WhatsApp Image 2026-06-05 at 10.58.37.jpeg" alt="Alphonse Yawo AMOULE" className="w-full h-full object-cover" />
             </div>
             <span className="hidden sm:inline tracking-[0.2em] text-sm">PORTFOLIO</span>
           </a>
