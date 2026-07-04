@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 const visuals = [
-  { src: "/bienvenue-learn.png", title: "Bienvenue — Programme LEARN" },
-  { src: "/dr-somali.png", title: "Conférence LEARN — Dr Franck Kossi SOMALI" },
-  { src: "/joel-ameyou.png", title: "Speaker — AMEYOU Comlan Joél" },
-  { src: "/moukaila.png", title: "Speaker — MOUKAILA Moubarak" },
-  { src: "/partenaires-learn.png", title: "Partenaires — Programme LEARN" },
-  { src: "/alpha-marketing.jpg", title: "Alpha Marketing — Nos offres" },
+  { src: "/VISUEL DE LA BIENVENUE.png", title: "Bienvenue — Programme LEARN" },
+  { src: "/IMG_1052.JPG", title: "Conférence LEARN — Dr Franck Kossi SOMALI" },
+  { src: "/1.1.1.1.1.jpg", title: "Bonne rentrée — Groupe Ecom" },
+  { src: "/SCI.png", title: "Solve Consult — Bonne fête de l'indépendance" },
+  { src: "/Vous êtes .png", title: "Partenaires — Programme LEARN" },
+  { src: "/GRACE.jpg", title: "Alpha Marketing — Nos offres" },
 ];
 
 const AutresRealisations = () => {
