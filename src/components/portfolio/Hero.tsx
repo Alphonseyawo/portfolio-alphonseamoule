@@ -1,19 +1,51 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, MapPin, FileDown } from "lucide-react";
-import portraitAsset from "@/assets/portrait-suit.jpg.asset.json";
 
 const SplitLine = ({ text, className = "", startDelay = 0 }: { text: string; className?: string; startDelay?: number }) => {
-  const chars = Array.from(text);
+  const words = text.split(" ");
+  let cursor = 0;
+
   return (
-    <motion.span className={`inline-block ${className}`} initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { delayChildren: startDelay, staggerChildren: 0.05 } } }} aria-label={text}>
-      {chars.map((ch, i) => (
-        <motion.span key={i} aria-hidden="true" className="inline-block" style={{ whiteSpace: "pre" }} variants={{ hidden: { opacity: 0, x: "0.8em", filter: "blur(6px)" }, visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
-          {ch === " " ? "\u00A0" : ch}
-        </motion.span>
-      ))}
+    <motion.span className={`inline ${className}`} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.7 }} aria-label={text}>
+      {words.map((word, wordIndex) => {
+        const startIndex = cursor;
+        cursor += word.length + 1;
+
+        return (
+          <span key={`${word}-${wordIndex}`} className="inline-block whitespace-nowrap" aria-hidden="true">
+            <motion.span
+              className="inline-block"
+              custom={startIndex}
+              variants={{
+                hidden: {},
+                visible: (i: number) => ({ transition: { delayChildren: startDelay + i * 0.04, staggerChildren: 0.04 } }),
+              }}
+            >
+              {Array.from(word).map((ch, i) => (
+                <motion.span key={`${ch}-${i}`} className="inline-block" variants={{ hidden: { opacity: 0, x: "0.8em", filter: "blur(6px)" }, visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
+                  {ch}
+                </motion.span>
+              ))}
+            </motion.span>
+            {wordIndex < words.length - 1 ? "\u00A0" : null}
+          </span>
+        );
+      })}
     </motion.span>
   );
 };
+
+const Ampersand = () => (
+  <motion.span
+    initial={{ opacity: 0, x: "0.8em", filter: "blur(6px)" }}
+    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+    viewport={{ once: false, amount: 0.7 }}
+    transition={{ duration: 0.5, delay: 0.92, ease: [0.22, 1, 0.36, 1] }}
+    className="inline-block px-[0.18em] text-gradient italic font-medium"
+  >
+    {" & "}
+  </motion.span>
+);
 
 const Hero = () => (
   <section id="home" className="relative min-h-screen flex items-center bg-hero-gradient grain overflow-hidden">
@@ -24,12 +56,10 @@ const Hero = () => (
           <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" /><span className="relative inline-flex rounded-full h-2 w-2 bg-primary" /></span>
           Disponible pour de nouveaux projets
         </div>
-        <h1 data-no-reveal className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
+        <h1 data-no-reveal className="font-display text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl font-bold leading-[0.95]">
           <SplitLine text="Marketing digital" startDelay={0.2} />
-          <br />
-          <span className="text-gradient italic font-medium">&amp;</span>
-          <br />
-          <SplitLine text="communication." className="text-primary" startDelay={1.2} />
+          <Ampersand />
+          <SplitLine text="communication." className="text-primary" startDelay={1.05} />
         </h1>
         <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
           Je suis <span className="text-foreground font-medium">Alphonse Yawo AMOULE</span>, créateur de contenus et stratège digital. Je transforme les idées en visuels qui captent et en campagnes qui convertissent.
@@ -48,7 +78,7 @@ const Hero = () => (
         <div className="relative aspect-square w-full max-w-md mx-auto lv-float">
           <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
           <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated bg-card-gradient">
-            <img src={portraitAsset.url} alt="Portrait de Alphonse Yawo AMOULE" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "50% 20%" }} />
+            <img src="/IMG_1052.JPG" alt="Portrait de Alphonse Yawo AMOULE" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "50% 18%" }} />
           </div>
           <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute -right-4 bottom-16 bg-primary text-primary-foreground rounded-2xl px-4 py-3 shadow-glow">
             <div className="text-xs opacity-80">Projets</div>
