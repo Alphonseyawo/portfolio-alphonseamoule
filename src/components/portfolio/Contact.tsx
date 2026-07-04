@@ -15,7 +15,7 @@ const Contact = () => {
   const links = [
     { label: "Email", value: "amoulealphonse38@gmail.com", href: "mailto:amoulealphonse38@gmail.com", icon: Mail },
     { label: "Téléphone / WhatsApp", value: "+228 70 29 03 66", href: "https://wa.me/22870290366", icon: Phone },
-    { label: "Localisation", value: "Lomé — Hédranawoé, Togo", href: "#", icon: MapPin },
+    { label: "Localisation", value: "Lomé — Hédranawoé, Togo", href: "https://www.google.com/maps/search/?api=1&query=Lom%C3%A9%20H%C3%A9dranawo%C3%A9%20Togo", icon: MapPin },
   ];
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -54,7 +54,7 @@ const Contact = () => {
             <p className="text-base sm:text-lg text-muted-foreground max-w-lg leading-relaxed mb-10">Disponible pour des missions en marketing digital, création de contenu, graphisme ou montage vidéo.</p>
             <div className="space-y-3 mb-10">
               {links.map((link) => (
-                <a key={link.label} href={link.href} className="group flex items-center gap-4 sm:gap-6 p-4 sm:p-5 rounded-2xl bg-card-gradient border border-border hover:border-primary/40 transition-all duration-300">
+                <a key={link.label} href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined} className="group flex items-center gap-4 sm:gap-6 p-4 sm:p-5 rounded-2xl bg-card-gradient border border-border hover:border-primary/40 transition-all duration-300">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all shrink-0"><link.icon className="w-5 h-5" /></div>
                   <div className="flex-1 min-w-0"><div className="text-xs uppercase tracking-widest text-muted-foreground mb-1">{link.label}</div><div className="font-display text-sm sm:text-base font-medium truncate">{link.value}</div></div>
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all shrink-0" />
