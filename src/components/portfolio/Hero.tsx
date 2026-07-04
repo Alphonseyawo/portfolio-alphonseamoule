@@ -41,7 +41,7 @@ const Ampersand = () => (
     whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
     viewport={{ once: false, amount: 0.7 }}
     transition={{ duration: 0.5, delay: 0.92, ease: [0.22, 1, 0.36, 1] }}
-    className="inline-block text-gradient italic font-medium"
+    className="inline-block px-[0.18em] text-gradient italic font-medium"
   >
     {" & "}
   </motion.span>
