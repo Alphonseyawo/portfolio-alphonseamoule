@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, ArrowUpRight, Send, Loader as Loader2 } from "luci
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import { createClient } from "@supabase/supabase-js";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Nom requis").max(100),
@@ -26,6 +26,17 @@ const Contact = () => {
     const parsed = schema.safeParse(form);
     if (!parsed.success) { toast.error(parsed.error.issues[0].message); return; }
     setLoading(true);
+    const backendUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
+    const backendKey = (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY) as string | undefined;
+    if (!backendUrl || !backendKey) {
+      const subject = encodeURIComponent(`Message portfolio — ${parsed.data.name}`);
+      const body = encodeURIComponent(`${parsed.data.message}\n\nNom: ${parsed.data.name}\nEmail: ${parsed.data.email}`);
+      window.location.href = `mailto:amoulealphonse38@gmail.com?subject=${subject}&body=${body}`;
+      setLoading(false);
+      toast.success("Votre application email va s'ouvrir pour envoyer le message.");
+      return;
+    }
+    const supabase = createClient(backendUrl, backendKey);
     const { error } = await supabase.from("contact_messages").insert({ name: parsed.data.name, email: parsed.data.email, message: parsed.data.message });
     setLoading(false);
     if (error) { toast.error("Impossible d'envoyer le message. Réessayez."); return; }
