@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Download, FileText, Eye, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import carrouselPreview from "@/assets/carrousel-learn-preview.jpg.asset.json";
 
-const carrouselPdfUrl = "/CARROUSEL_LEARN_PDF.pdf";
+const carrouselPdfUrl = "/carrousel-learn.pdf";
 
 const documents = [
   { title: "ARTICLE SEO", description: "Article rédigé dans le cadre du projet, hébergé sur Google Docs.", url: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/edit?usp=sharing", embedUrl: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/preview", filename: "article-seo.pdf", isExternal: true },
