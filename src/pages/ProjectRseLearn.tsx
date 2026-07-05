@@ -10,7 +10,7 @@ const documents = [
   { title: "ARTICLE SEO", description: "Article rédigé dans le cadre du projet, hébergé sur Google Docs.", url: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/edit?usp=sharing", embedUrl: "https://docs.google.com/document/d/1P58Zix8odyGanDr___cQ4pp7q1G-8ostBvlyMJLoVDc/preview", filename: "article-seo.pdf", isExternal: true },
   { title: "COMMUNICATION OFFICIELLE", description: "Article rédigé pendant le stage, hébergé sur Google Docs.", url: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/edit?usp=sharing", embedUrl: "https://docs.google.com/document/d/1R619oH8836QVvwgC2hqh97nAur6wptLjtMSdTayCp1Q/preview", filename: "communication-officielle.pdf", isExternal: true },
   { title: "ARTICLES SCI", description: "Article rédigé pendant le stage, hébergé sur Google Docs.", url: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/edit?usp=sharing", embedUrl: "https://docs.google.com/document/d/1Q4q0wVCH9kDchTSxB5TJt7VQ30ti2LMu6EOpqb9JL7c/preview", filename: "articles-sci.pdf", isExternal: true },
-  { title: "Carrousel LEARN", description: "Carrousel visuel du programme LEARN au format PDF.", url: carrouselPdfUrl, embedUrl: carrouselPdfUrl, previewImage: carrouselPreview.url, filename: "CARROUSEL_LEARN_PDF.pdf", isExternal: false },
+  { title: "Carrousel LEARN", description: "Carrousel visuel du programme LEARN au format PDF.", url: carrouselPdfUrl, embedUrl: carrouselPdfUrl, previewImage: carrouselPreviewUrl, filename: "CARROUSEL_LEARN_PDF.pdf", isExternal: false },
 ];
 
 const canvaLinks = [
