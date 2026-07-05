@@ -47,7 +47,16 @@ const ProjectRseLearn = () => {
                 <a href={doc.url} download={doc.filename} className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors"><Download className="w-4 h-4" />Télécharger</a>
               </div>
               <div className="mt-8 rounded-2xl overflow-hidden border border-border bg-secondary/30">
-                <iframe src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`} title={doc.title} className="w-full h-[480px]" />
+                {doc.previewImage ? (
+                  <a href={doc.url} target="_blank" rel="noopener noreferrer" className="block relative group/preview">
+                    <img src={doc.previewImage} alt={`Aperçu de ${doc.title}`} className="w-full h-[480px] object-cover object-top" />
+                    <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover/preview:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground text-sm font-medium"><Eye className="w-4 h-4" />Lire en ligne</span>
+                    </div>
+                  </a>
+                ) : (
+                  <iframe src={doc.isExternal ? doc.embedUrl : `${doc.embedUrl}#toolbar=0&view=FitH`} title={doc.title} className="w-full h-[480px]" />
+                )}
               </div>
             </motion.div>
           ))}
