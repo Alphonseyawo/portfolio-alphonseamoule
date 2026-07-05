@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import portraitNavbar from "@/assets/portrait-navbar-3.jpeg.asset.json";
 
 const navItems = [
   { label: "À propos", href: "#about" },
