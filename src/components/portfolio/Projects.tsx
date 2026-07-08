@@ -8,7 +8,6 @@ const projects = [
   { n: "01", category: "Communication digitale & Marketing · Groupe Ecom & Solve Consult International", title: "Groupe Ecom & Solve Consult International", desc: "Deux stages en communication digitale et marketing : conception de visuels, carrousels et contenus éditoriaux, rédaction d'articles et de newsletters, montage vidéo, community management.", tags: ["Carrousels", "Articles blog", "Newsletters", "TikTok", "Instagram"], href: "/projets/rse-learn" },
   { n: "02", category: "Création de contenu · Vidéo", title: "Montage & Production sociale", desc: "Production de vidéos courtes optimisées pour les formats verticaux. Découpage, sous-titrage et habillage graphique.", tags: ["CapCut", "VN", "Reels"] },
   { n: "03", category: "Email Marketing · Automation", title: "Campagnes Brevo & Workflows", desc: "Mise en place de campagnes emailing et de scénarios d'automatisation, depuis la segmentation jusqu'à la mesure des performances.", tags: ["Brevo", "HubSpot", "Automation"], href: "https://my.brevo.com/template/_XMzKbcCCSxlVas95gckEsrm64sa4vJXyM3OmnWXULv4mwiiiDME6K7sja4" },
-  { n: "04", category: "Design graphique · Réseaux sociaux", title: "Autres réalisations — Visuels & affiches", desc: "Une galerie de visuels conçus pour des conférences, campagnes et programmes : affiches, posts Instagram et supports promotionnels.", tags: ["Canva", "Photoshop", "Affiches", "Posts"], href: "/projets/autres-realisations" },
 ];
 
 const Projects = () => (
