@@ -6,7 +6,7 @@ const services = [
   { icon: Palette, title: "Graphisme & Design", desc: "Création de visuels, carrousels et identités attractives qui racontent votre marque.", tags: ["Photoshop", "Canva", "Figma"] },
   { icon: Video, title: "Montage vidéo", desc: "Production de contenus vidéo dynamiques pour les réseaux sociaux et campagnes digitales.", tags: ["CapCut", "VN"] },
   { icon: Mail, title: "Email Marketing", desc: "Campagnes d'emailing et automatisation marketing pour fidéliser et convertir vos prospects.", tags: ["Brevo", "HubSpot"] },
-  { icon: Layout, title: "UX/UI Design", desc: "Interfaces simples, claires et orientées utilisateur (niveau débutant en progression constante).", tags: ["Figma"] },
+  { icon: Layout, title: "UX/UI Design", desc: <>Interfaces simples, claires et orientées utilisateur (<strong className="text-primary font-bold">niveau débutant en progression constante</strong>).</>, tags: ["Figma"] },
   { icon: Bot, title: "Création de chatbot", desc: "Mise en place de chatbots intelligents pour automatiser la relation client et les conversions.", tags: ["Stratégie", "Automation"] },
 ];
 
