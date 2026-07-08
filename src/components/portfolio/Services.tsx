@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Palette, Video, Mail, Share2, LayoutGrid as Layout, Bot } from "lucide-react";
 
 const services = [
-  { icon: Share2, title: "Gestion réseaux sociaux", desc: "Stratégie, planification et publication sur TikTok, Instagram et Facebook pour engager votre audience.", tags: ["TikTok", "Instagram", "Facebook"] },
+  { icon: Share2, title: "Gestion réseaux sociaux", desc: "Stratégie, planification et publication sur LinkedIn, TikTok, Instagram et Facebook pour engager votre audience.", tags: ["LinkedIn", "TikTok", "Instagram", "Facebook"] },
   { icon: Palette, title: "Graphisme & Design", desc: "Création de visuels, carrousels et identités attractives qui racontent votre marque.", tags: ["Photoshop", "Canva", "Figma"] },
   { icon: Video, title: "Montage vidéo", desc: "Production de contenus vidéo dynamiques pour les réseaux sociaux et campagnes digitales.", tags: ["CapCut", "VN"] },
   { icon: Mail, title: "Email Marketing", desc: "Campagnes d'emailing et automatisation marketing pour fidéliser et convertir vos prospects.", tags: ["Brevo", "HubSpot"] },
