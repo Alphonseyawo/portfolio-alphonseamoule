@@ -3,13 +3,22 @@ import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
+import bonneRentree from "@/assets/realisations/bonne-rentree.jpg.asset.json";
+import certificationIa from "@/assets/realisations/certification-ia.png.asset.json";
+import commandez from "@/assets/realisations/commandez-maintenant.jpg.asset.json";
+import rseLearn from "@/assets/realisations/rse-learn.png.asset.json";
+import recrutement from "@/assets/realisations/recrutement.jpg.asset.json";
+import acteurChangement from "@/assets/realisations/acteur-changement.jpg.asset.json";
+import partenaires from "@/assets/realisations/partenaires.png.asset.json";
+
 const visuals = [
-  { src: "/VISUEL DE LA BIENVENUE.png", title: "Bienvenue — Programme LEARN" },
-  { src: "/IMG_1052.JPG", title: "Conférence LEARN — Dr Franck Kossi SOMALI" },
-  { src: "/1.1.1.1.1.jpg", title: "Bonne rentrée — Groupe Ecom" },
-  { src: "/SCI.png", title: "Solve Consult — Bonne fête de l'indépendance" },
-  { src: "/Vous êtes .png", title: "Partenaires — Programme LEARN" },
-  { src: "/GRACE.jpg", title: "Alpha Marketing — Nos offres" },
+  { src: bonneRentree.url, title: "Bonne rentrée — Ecom Green Mobility" },
+  { src: certificationIa.url, title: "Certification en IA — Campus SCI × ESCEN" },
+  { src: commandez.url, title: "Commandez maintenant — Ecom" },
+  { src: rseLearn.url, title: "RSE LEARN — Programme panafricain" },
+  { src: recrutement.url, title: "Nous recrutons — Solve Consult" },
+  { src: acteurChangement.url, title: "Acteur du changement — Programme LEARN" },
+  { src: partenaires.url, title: "Partenaires — Programme LEARN" },
 ];
 
 const AutresRealisations = () => {
