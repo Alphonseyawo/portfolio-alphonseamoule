@@ -35,12 +35,22 @@ const carrousels = [
 ];
 
 const ProjectRseLearn = () => {
-  useEffect(() => { document.title = "Projet RSE Learn — Documents | Alphonse Yawo AMOULE"; }, []);
+  const navigate = useNavigate();
+  useEffect(() => { document.title = "Projet RSE Learn — Documents | Alphonse Yawo AMOULE"; window.scrollTo(0, 0); }, []);
+
+  const handleBack = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/#projects");
+    }
+  };
 
   return (
     <main className="min-h-screen bg-background">
       <div className="container py-12 sm:py-16 lg:py-24 max-w-6xl">
-        <Link to="/#projects" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10 sm:mb-12"><ArrowLeft className="w-4 h-4" />Retour aux projets</Link>
+        <a href="/#projects" onClick={handleBack} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10 sm:mb-12"><ArrowLeft className="w-4 h-4" />Retour aux projets</a>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-16">
           <div className="text-sm uppercase tracking-[0.3em] text-primary mb-6">— Communication digitale & Marketing</div>
@@ -54,23 +64,33 @@ const ProjectRseLearn = () => {
             <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center"><BookOpen className="w-5 h-5 text-primary" /></div>
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold">1. Articles</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((doc, i) => (
-              <motion.div key={doc.url} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-card-gradient border border-border rounded-3xl p-8 hover:border-primary/40 transition-all duration-500 group">
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500"><FileText className="w-6 h-6" /></div>
-                <h3 className="font-display text-2xl font-semibold mb-3">{doc.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">{doc.description}</p>
-                <div className="flex flex-wrap gap-3">
-                  <a href={doc.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"><Eye className="w-4 h-4" />Lire en ligne</a>
-                  <a href={doc.url} download={doc.filename} className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors"><Download className="w-4 h-4" />Télécharger</a>
+              <motion.a
+                key={doc.url}
+                href={doc.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group flex flex-col bg-card-gradient border border-border rounded-3xl p-6 sm:p-8 hover:border-primary/50 hover:-translate-y-1 transition-all duration-500"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500"><FileText className="w-5 h-5" /></div>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
-                <div className="mt-8 rounded-2xl overflow-hidden border border-border bg-secondary/30">
-                  <iframe src={doc.embedUrl} title={doc.title} className="w-full h-[480px]" />
-                </div>
-              </motion.div>
+                <h3 className="font-display text-xl sm:text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">{doc.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mb-6 flex-1">{doc.description}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
+                  <Eye className="w-4 h-4" />Lire l'article
+                </span>
+              </motion.a>
             ))}
           </div>
         </section>
+
 
         {/* 2 — VISUELS */}
         <section className="mb-20">
