@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
-import { Palette, Video, Mail, Share2, LayoutGrid as Layout, Bot } from "lucide-react";
+import { Palette, Video, Mail, Share2, LayoutGrid as Layout, Bot, Megaphone } from "lucide-react";
 
 const services = [
   { icon: Share2, title: "Gestion réseaux sociaux", desc: "Stratégie, planification et publication sur LinkedIn, TikTok, Instagram et Facebook pour engager votre audience.", tags: ["LinkedIn", "TikTok", "Instagram", "Facebook"] },
   { icon: Palette, title: "Graphisme & Design", desc: "Création de visuels, carrousels et identités attractives qui racontent votre marque.", tags: ["Photoshop", "Canva", "Figma"] },
   { icon: Video, title: "Montage vidéo", desc: "Production de contenus vidéo dynamiques pour les réseaux sociaux et campagnes digitales.", tags: ["CapCut", "VN"] },
   { icon: Mail, title: "Email Marketing", desc: "Campagnes d'emailing et automatisation marketing pour fidéliser et convertir vos prospects.", tags: ["Brevo", "HubSpot"] },
+  { icon: Megaphone, title: "Publicité digitale", desc: "Conception et gestion de campagnes publicitaires ciblées sur Meta, Google et TikTok Ads pour maximiser la visibilité et les conversions.", tags: ["Meta Ads", "Google Ads", "TikTok Ads"] },
   { icon: Layout, title: "UX/UI Design", desc: <>Interfaces simples, claires et orientées utilisateur (<strong className="text-primary font-bold">niveau débutant en progression constante</strong>).</>, tags: ["Figma"] },
   { icon: Bot, title: "Création de chatbot", desc: "Mise en place de chatbots intelligents pour automatiser la relation client et les conversions.", tags: ["Stratégie", "Automation"] },
 ];
+
 
 const Services = () => (
   <section id="services" className="py-32 bg-secondary/30 relative">
