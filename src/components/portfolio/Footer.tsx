@@ -11,8 +11,8 @@ const Footer = () => {
             <a href="#home" className="inline-flex items-center gap-2 font-display font-bold text-2xl"><span className="tracking-[0.25em]">PORTFOLIO</span></a>
             <p className="text-muted-foreground max-w-md leading-relaxed">Alphonse Yawo AMOULE — Marketing digital, création de contenu et stratégie de communication. Transformons vos idées en résultats.</p>
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://www.threads.com/@alphonseamoule?xmt=AQG0D04L2b6SljvJw_sJ67lRuipQlsCez1t5W17gIpv9MA4" target="_blank" rel="noreferrer" aria-label="Threads" className="w-10 h-10 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"><Instagram className="w-4 h-4" /></a>
-              <a href="https://www.linkedin.com/in/alphonse-amoule-2a472534b" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-10 h-10 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"><Linkedin className="w-4 h-4" /></a>
+              <a href="https://www.threads.com/@alphonseamoule?xmt=AQG0D04L2b6SljvJw_sJ67lRuipQlsCez1t5W17gIpv9MA4" target="_blank" rel="noopener noreferrer" aria-label="Threads" className="w-10 h-10 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"><Instagram className="w-4 h-4" /></a>
+              <a href="https://www.linkedin.com/in/alphonse-amoule-2a472534b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"><Linkedin className="w-4 h-4" /></a>
             </div>
           </div>
           <div className="md:col-span-3 space-y-4">
