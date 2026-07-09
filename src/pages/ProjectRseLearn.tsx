@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Download, FileText, Eye, Image as ImageIcon, BookOpen, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
