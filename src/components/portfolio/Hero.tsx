@@ -51,18 +51,22 @@ const Hero = () => (
   <section id="home" className="relative min-h-screen flex items-center bg-hero-gradient grain overflow-hidden">
     <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
     <div className="container relative z-10 grid lg:grid-cols-12 gap-12 items-center py-32">
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="lg:col-span-7 space-y-8">
+      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="lg:col-span-8 space-y-8">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/40 backdrop-blur-sm text-sm text-muted-foreground">
           <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" /><span className="relative inline-flex rounded-full h-2 w-2 bg-primary" /></span>
           Disponible pour de nouveaux projets
         </div>
-        <h1 data-no-reveal className="font-display text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl font-bold leading-[0.95]">
-          <SplitLine text="Marketing digital" startDelay={0.2} />
-          <Ampersand />
-          <SplitLine text="communication." className="text-primary" startDelay={1.05} />
+        <h1 data-no-reveal className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-[0.95]">
+          <span className="block sm:whitespace-nowrap">
+            <SplitLine text="Marketing digital" startDelay={0.2} />
+            <Ampersand />
+          </span>
+          <span className="block">
+            <SplitLine text="communication." className="text-primary" startDelay={1.05} />
+          </span>
         </h1>
         <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
-          Je suis <span className="text-foreground font-medium">Alphonse Yawo AMOULE</span>, créateur de contenus et stratège digital. Je transforme les idées en visuels qui captent et en campagnes qui convertissent.
+          Je suis <span className="text-foreground font-medium">Alphonse Yawo AMOULE</span>, étudiant en 3ème année en Marketing Digital & E-commerce à ESCEN. Passionné par la communication, le marketing digital et la création de visuels attractifs, j'aime développer des stratégies de réseaux sociaux et concevoir du contenu engageant.
         </p>
         <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
           <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" /> Lomé, Togo</span>
