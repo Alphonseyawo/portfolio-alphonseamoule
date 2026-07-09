@@ -78,7 +78,7 @@ const Hero = () => (
           <a href="/CV-Alphonse-AMOULE.pdf" target="_blank" rel="noopener noreferrer" download="CV-Alphonse-AMOULE.pdf" className="group inline-flex items-center gap-2 px-8 py-4 rounded-full border border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"><FileDown className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />Télécharger CV</a>
         </div>
       </motion.div>
-      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }} className="lg:col-span-5 relative">
+      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }} className="lg:col-span-4 relative">
         <div className="relative aspect-square w-full max-w-md mx-auto lv-float">
           <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
           <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated bg-card-gradient">
