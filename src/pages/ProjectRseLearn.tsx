@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft, Download, FileText, Eye, Image as ImageIcon, BookOpen } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { ArrowLeft, Download, FileText, Eye, Image as ImageIcon, BookOpen, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+
 
 import bonneRentree from "@/assets/realisations/bonne-rentree.jpg.asset.json";
 import certificationIa from "@/assets/realisations/certification-ia.png.asset.json";
