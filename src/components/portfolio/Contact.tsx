@@ -15,7 +15,7 @@ const Contact = () => {
   const links = [
     { label: "Email", value: "amoulealphonse38@gmail.com", href: "mailto:amoulealphonse38@gmail.com", icon: Mail },
     { label: "Téléphone / WhatsApp", value: "+228 70 29 03 66", href: "https://wa.me/22870290366", icon: Phone },
-    { label: "Localisation", value: "Lomé — Hédranawoé, Togo", href: "https://www.google.com/maps/search/?api=1&query=Lom%C3%A9%20H%C3%A9dranawo%C3%A9%20Togo", icon: MapPin },
+    { label: "Localisation", value: "Lomé — Rue Fazao, Togo", href: "https://www.google.com/maps/place/Rue+Fazao,+Lom%C3%A9/@6.1674,1.2448,17z/data=!4m6!3m5!1s0x1023e23013ea5b2d:0x92e5e0fc5f5391f7!8m2!3d6.1628665!4d1.2416898!16s%2Fg%2F11fmz2589d?hl=fr", icon: MapPin },
   ];
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
