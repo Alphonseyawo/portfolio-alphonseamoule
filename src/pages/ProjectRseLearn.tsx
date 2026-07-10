@@ -29,7 +29,7 @@ const visuels = [
 ];
 
 const carrousels = [
-  { title: "Carrousel LEARN", description: "Carrousel visuel du programme LEARN.", url: "/carrousel-learn.pdf", previewImage: "/carrousel-learn-preview.jpg", filename: "CARROUSEL_LEARN.pdf" },
+  { title: "Carrousel : Projet LEARN", description: "Carrousel visuel du programme LEARN.", url: "/carrousel-learn.pdf", previewImage: "/carrousel-learn-preview.jpg", filename: "CARROUSEL_LEARN.pdf" },
   { title: "Carrousel Pentecôte", description: "Carrousel visuel — campagne Pentecôte.", url: "/carrousel-pentecote.pdf", previewImage: "/carrousel-pentecote-preview.jpg", filename: "CARROUSEL_PENTECOTE.pdf" },
   { title: "Carrousel Indépendance du Togo", description: "Carrousel visuel — Indépendance du Togo.", url: "/carrousel-independance-togo.pdf", previewImage: "/carrousel-independance-togo-preview.jpg", filename: "CARROUSEL_INDEPENDANCE_TOGO.pdf" },
 ];
