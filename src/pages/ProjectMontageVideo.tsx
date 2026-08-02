@@ -44,6 +44,7 @@ const ProjectMontageVideo = () => {
       </div>
     </div>
   </main>
-);
+  );
+};
 
 export default ProjectMontageVideo;
