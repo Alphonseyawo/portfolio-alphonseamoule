@@ -20,6 +20,14 @@ const Index = () => {
     meta.setAttribute("name", "description");
     meta.setAttribute("content", "Portfolio de Alphonse Yawo AMOULE — spécialiste marketing digital, création de contenu, graphisme et email marketing à Lomé.");
     document.head.appendChild(meta);
+
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.slice(1);
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "auto", block: "start" });
+      });
+    }
   }, []);
 
   return (
