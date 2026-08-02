@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ProjectRseLearn from "./pages/ProjectRseLearn.tsx";
+import ProjectMontageVideo from "./pages/ProjectMontageVideo.tsx";
 
 const queryClient = new QueryClient();
 
