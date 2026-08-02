@@ -1,13 +1,23 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import videoAsset from "@/assets/montage-video.mp4.asset.json";
 
-const ProjectMontageVideo = () => (
+const ProjectMontageVideo = () => {
+  const navigate = useNavigate();
+
+  const handleBack = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (window.history.length > 1) navigate(-1);
+    else navigate("/#projects");
+  };
+
+  return (
   <main className="min-h-screen py-24">
     <div className="container max-w-4xl">
-      <Link to="/#projects" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
+      <a href="/#projects" onClick={handleBack} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
         <ArrowLeft className="w-4 h-4" /> Retour aux projets
-      </Link>
+      </a>
+
 
       <div className="text-xs uppercase tracking-widest text-primary mb-3">Création de contenu · Vidéo</div>
       <h1 className="font-display text-4xl lg:text-5xl font-bold mb-6">Montage vidéo</h1>
