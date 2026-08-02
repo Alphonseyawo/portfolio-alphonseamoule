@@ -62,7 +62,7 @@ const Hero = () => (
             <Ampersand />
           </span>
           <span className="block">
-            <SplitLine text="communication." className="text-primary" startDelay={1.05} />
+            <SplitLine text="communication" className="text-primary" startDelay={1.05} />
           </span>
         </h1>
         <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
