@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Linkedin, Github, ArrowUp } from "lucide-react";
 
 const openExternalLink = (url: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
@@ -9,6 +9,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   const instagramUrl = "https://www.instagram.com/alphonseamoule/";
   const linkedinUrl = "https://www.linkedin.com/in/alphonse-amoule-2a472534b/";
+  const githubUrl = "https://github.com/Alphonseyawo";
 
   return (
     <footer className="relative border-t border-border bg-card-gradient">
@@ -20,6 +21,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 pt-2">
               <a href={instagramUrl} onClick={openExternalLink(instagramUrl)} target="_blank" rel="external noopener noreferrer" aria-label="Instagram" className="w-10 h-10 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"><Instagram className="w-4 h-4" /></a>
               <a href={linkedinUrl} onClick={openExternalLink(linkedinUrl)} target="_blank" rel="external noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"><Linkedin className="w-4 h-4" /></a>
+              <a href={githubUrl} onClick={openExternalLink(githubUrl)} target="_blank" rel="external noopener noreferrer" aria-label="GitHub" className="w-10 h-10 inline-flex items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"><Github className="w-4 h-4" /></a>
             </div>
           </div>
           <div className="md:col-span-3 space-y-4">
