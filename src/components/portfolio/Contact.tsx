@@ -59,7 +59,7 @@ const Contact = () => {
             <div className="grid grid-cols-2 gap-3">
               <div className="p-4 sm:p-5 rounded-2xl border border-border bg-secondary/30">
                 <div className="text-xs uppercase tracking-widest text-primary mb-3">Langues</div>
-                <div className="flex flex-wrap gap-1.5">{["Français", "Anglais", "Éwé"].map((l) => (<span key={l} className="px-2.5 py-1 rounded-full bg-background border border-border text-xs">{l}</span>))}</div>
+                <div className="flex flex-wrap gap-1.5">{["Français", "Anglais (Intermédiaire)", "Éwé"].map((l) => (<span key={l} className="px-2.5 py-1 rounded-full bg-background border border-border text-xs">{l}</span>))}</div>
               </div>
               <div className="p-4 sm:p-5 rounded-2xl border border-border bg-secondary/30">
                 <div className="text-xs uppercase tracking-widest text-primary mb-3">Loisirs</div>
